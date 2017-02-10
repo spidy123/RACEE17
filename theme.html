@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  
+    <!-- Basic Page Needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <title>Conference</title>
+
+    <!-- Mobile Specific Metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/icon" href="img/logo.png"/>
+
+    <!-- CSS
+    ================================================== -->       
+    <!-- Bootstrap css file-->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font awesome css file-->
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <!-- Superslide css file-->
+    <link rel="stylesheet" href="css/superslides.css">
+    <!-- Slick slider css file -->
+    <link href="css/slick.css" rel="stylesheet"> 
+    <!-- Circle counter cdn css file -->
+    <link rel='stylesheet prefetch' href='https://cdn.rawgit.com/pguso/jquery-plugin-circliful/master/css/jquery.circliful.css'>  
+    <!-- smooth animate css file -->
+    <link rel="stylesheet" href="css/animate.css"> 
+    <!-- preloader -->
+    <link rel="stylesheet" href="css/queryLoader.css" type="text/css" />
+    <!-- gallery slider css -->
+    <link type="text/css" media="all" rel="stylesheet" href="css/jquery.tosrus.all.css" />    
+    <!-- Default Theme css file -->
+    <link id="switcher" href="css/themes/default-theme.css" rel="stylesheet">
+    <!-- Main structure css file -->
+    <link href="style.css" rel="stylesheet">
+   
+    <!-- Google fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet' type='text/css'>   
+    <link href='http://fonts.googleapis.com/css?family=Varela' rel='stylesheet' type='text/css'>    
+<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+
+   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+
+ 
+  </head>
+  <style>
+   
+  
+  
+  
+  
+  .bs-calltoaction{
+    position: relative;
+    width:auto;
+    padding: 15px 25px;
+    border: 1px solid black;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+    .bs-calltoaction > .row{
+        display:table;
+        width: calc(100% + 30px);
+    }
+     
+        .bs-calltoaction > .row > [class^="col-"],
+        .bs-calltoaction > .row > [class*=" col-"]{
+            float:none;
+            display:table-cell;
+            vertical-align:middle;
+        }
+
+            .cta-contents{
+                padding-top: 10px;
+                padding-bottom: 10px;
+            }
+
+                .cta-title{
+                    margin: 0 auto 15px;
+                    padding: 0;
+                }
+
+                .cta-desc{
+                    padding: 0;
+                }
+
+                .cta-desc p:last-child{
+                    margin-bottom: 0;
+                }
+
+            .cta-button{
+                padding-top: 10px;
+                padding-bottom: 10px;
+            }
+
+@media (max-width: 991px){
+    .bs-calltoaction > .row{
+        display:block;
+        width: auto;
+    }
+
+        .bs-calltoaction > .row > [class^="col-"],
+        .bs-calltoaction > .row > [class*=" col-"]{
+            float:none;
+            display:block;
+            vertical-align:middle;
+            position: relative;
+        }
+
+        .cta-contents{
+            text-align: center;
+        }
+}
+
+
+
+.bs-calltoaction.bs-calltoaction-default{
+    color: #333;
+    background-color: #fff;
+    border-color: #ccc;
+}
+
+.bs-calltoaction.bs-calltoaction-primary{
+    color: #fff;
+    background-color: #337ab7;
+    border-color: #2e6da4;
+}
+
+.bs-calltoaction.bs-calltoaction-info{
+    color: #fff;
+    background-color: #5bc0de;
+    border-color: #46b8da;
+}
+
+.bs-calltoaction.bs-calltoaction-success{
+    color: #fff;
+    background-color: #5cb85c;
+    border-color: #4cae4c;
+}
+
+.bs-calltoaction.bs-calltoaction-warning{
+    color: #fff;
+    background-color: #f0ad4e;
+    border-color: #eea236;
+}
+
+.bs-calltoaction.bs-calltoaction-danger{
+    color: #fff;
+    background-color: #d9534f;
+    border-color: #d43f3a;
+}
+
+.bs-calltoaction.bs-calltoaction-primary .cta-button .btn,
+.bs-calltoaction.bs-calltoaction-info .cta-button .btn,
+.bs-calltoaction.bs-calltoaction-success .cta-button .btn,
+.bs-calltoaction.bs-calltoaction-warning .cta-button .btn,
+.bs-calltoaction.bs-calltoaction-danger .cta-button .btn{
+    border-color:#fff;
+}
+
+
+.carousel-caption h3{
+color:#616161;
+}
+  
+  .btn3d {
+    position:relative;
+    top: -6px;
+    border:0;
+     transition: all 40ms linear;
+     margin-top:10px;
+     margin-bottom:10px;
+     margin-left:2px;
+     margin-right:2px;
+}
+.btn3d:active:focus,
+.btn3d:focus:hover,
+.btn3d:focus {
+    -moz-outline-style:none;
+         outline:medium none;
+}
+.btn3d:active, .btn3d.active {
+    top:2px;
+}
+.btn3d.btn-default {
+    color: #666666;
+    box-shadow:0 0 0 1px #ebebeb inset, 0 0 0 2px rgba(255,255,255,0.10) inset, 0 8px 0 0 #BEBEBE, 0 8px 8px 1px rgba(0,0,0,.2);
+    background-color:#f9f9f9;
+}
+.btn3d.btn-default:active, .btn3d.btn-default.active {
+    color: #666666;
+    box-shadow:0 0 0 1px #ebebeb inset, 0 0 0 1px rgba(255,255,255,0.15) inset, 0 1px 3px 1px rgba(0,0,0,.1);
+    background-color:#f9f9f9;
+}
+
+.schedule h3,button{
+	display:inline;
+	font-family: 'Montserrat', sans-serif;
+	color:red;
+	
+
+
+}
+
+
+.blinker button{ 
+font-family: muli,arial,sans-serif;  
+font-size: 20px;  
+font-weight: bold;  
+color:#333;  
+animation: changecolor 5s infinite;  
+-moz-animation: changecolor 5s infinite; 
+-webkit-animation: changecolor 5s infinite; 
+-ms-animation: changecolor 5s infinite; 
+-o-animation: changecolor 5s infinite; 
+} 
+
+@keyframes changecolor 
+{ 
+0% {color: red;}  
+25% {color: yellow;}  
+50% {color: blue;}  
+100% {color: green;}  
+} 
+/* Mozilla Browser */ 
+@-moz-keyframes changecolor 
+{ 
+0% {color: red;}  
+25% {color: yellow;}  
+50% {color: blue;}  
+100% {color: green;}  
+} 
+/* WebKit browser Safari and Chrome */ 
+@-webkit-keyframes changecolor 
+{ 
+0% {color: red;}  
+25% {color: yellow;}  
+50% {color: blue;}  
+100% {color: green;}  
+} 
+/* IE 9,10*/ 
+@-ms-keyframes changecolor 
+{ 
+0% {color: red;}  
+25% {color: yellow;}  
+50% {color: blue;}  
+100% {color: green;}  
+} 
+/* Opera Browser*/ 
+@-o-keyframes changecolor 
+{ 
+0% {color: red;}  
+25% {color: yellow;}  
+50% {color: blue;}  
+100% {color: green;}  
+} 
+
+
+
+
+.modal {
+    -webkit-transition: all 0.75s ease;
+    transition: all 0.75s ease;
+}
+.collapse h4{
+font-family: 'Roboto Condensed', sans-serif;
+
+}
+.collapse h3,h4{
+font-family: 'Montserrat', sans-serif;
+margin-left:4%;
+
+}
+
+
+
+
+</style> 
+  </style>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
+</script>
+<style>
+#aboutUs{
+min-height:100%;
+}
+</style>
+  <body>    
+
+    <!-- SCROLL TOP BUTTON -->
+    <a class="scrollToTop" href="#"></a>
+    <!-- END SCROLL TOP BUTTON -->
+
+    <!--=========== BEGIN HEADER SECTION ================-->
+    <header id="header">
+      <!-- BEGIN MENU -->
+      <div class="menu_area">
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">  <div class="container">
+            <div class="navbar-header">
+              <!-- FOR MOBILE VIEW COLLAPSED BUTTON -->
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <!-- LOGO -->
+              <!-- TEXT BASED LOGO -->
+              <a class="navbar-brand" href="index.html">RACEE<span>2017</span></a>              
+              <!-- IMG BASED LOGO  -->
+               <!-- <a class="navbar-brand" href="index.html"><img src="img/logo.png" alt="logo"></a>  -->            
+                     
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+              <ul id="top-menu" class="nav navbar-nav navbar-right main-nav">
+                  <li class="dropdown">
+                  <a href="index.html">Home</a>
+                  
+                </li> 
+				 <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Imp.information<span class="caret"></span></a>
+                  <ul class="dropdown-menu" role="menu">
+                    <li><a href="call_for_papers.html">Call for papers</a></li>
+                    <li><a href="theme.html">Themes of Conference</a></li>
+                    <li><a href="registrations.html">Registration and Payment</a></li>
+					
+                  </ul>
+                </li>   
+				 <li class="dropdown">
+                  <a href="persons.html">Committee</a>
+                  
+                </li> 
+				  	
+                <li><a href="gallery.html">Gallery</a></li>                
+                
+
+                <li><a href="contact.php">Contact</a></li>
+              </ul>           
+            </div><!--/.nav-collapse -->
+          </div>     
+        </nav>  
+      </div>
+      <!-- END MENU -->    
+    </header>
+	
+	<!-----Schedule--->
+	<br><br><br><br>
+<div class="container text-center">
+<br>
+<!-- Large modal -->
+<!--<button class="btn btn-default" data-toggle="modal" data-target=".bs-example-modal-lg">Large modal</button>-->
+  <div class="blinker" >
+ <!-- <h3>Click here to check full schedule of the conference  </h3>-->
+  <button type="button" class="btn3d btn btn-default btn-lg" data-toggle="collapse" data-target="#hidden_schedule"><span class="glyphicon glyphicon-time" ></span> Check Schedule</button>
+   
+ 
+ </div>
+<div id="hidden_schedule" class="collapse">
+
+  <button type="button" class="btn3d btn btn-default btn-lg" data-toggle="modal" data-target=".bs-example-modal-lg"><span class="glyphicon glyphicon-time" ></span> March 4</button>
+  <button type="button" class="btn3d btn btn-default btn-lg" data-toggle="modal" data-target=".bs-example-modal-md"><span class="glyphicon glyphicon-time" ></span> March 5</button>
+
+
+</div>
+  
+<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+
+  
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner">
+    <div class="item active">
+     <img class="img-responsive" src="img/back_schedule.jpg" style="width:100%;height:250px" alt="...">
+      <div class="carousel-caption">
+        <h2>8:30am to 9:30am</h2>
+		<h3>Registration and Breakfast</h3>
+      </div>
+    </div>
+    <div class="item">
+      <img class="img-responsive" src="img/back_schedule.jpg" style="width:100%;height:250px" alt="...">
+      <div class="carousel-caption">
+        <h2>9:30am to 11:30am</h2>
+		<h3>Inauguration</h3> 
+      </div>
+    </div>
+     <div class="item">
+      <img class="img-responsive"  src="img/back_schedule.jpg" style="width:100%;height:250px" alt="...">
+      <div class="carousel-caption">
+        <h2>11:15am to 11:30am</h2>
+		<h3>Hi Tea & Health Break</h3>
+      </div>
+    </div>
+	<div class="item">
+      <img class="img-responsive"  src="img/back_schedule.jpg" style="width:100%;height:250px" alt="...">
+      <div class="carousel-caption">
+        <h2>11:30am to 1:30pm</h2>
+		<h3>Plenary Session I: Civil Engineering</h3>
+      </div>
+    </div>
+	<div class="item">
+      <img class="img-responsive"  src="img/back_schedule.jpg" style="width:100%;height:250px" alt="...">
+      <div class="carousel-caption">
+        <h2>2:30pm to 4:30pm</h2>
+		<h3>Plenary Session II:  Water Conservation and Recycling</h3>
+      </div>
+    </div>
+	<div class="item">
+      <img class="img-responsive"  src="img/back_schedule.jpg" style="width:100%;height:250px" alt="...">
+      <div class="carousel-caption">
+        <h2>4:30pm to 6:30pm</h2>
+		<h3>Technical Session I: Civil Engineering </h3>
+      </div>
+    </div>
+	
+  </div>
+
+  <!-- Controls -->	
+   <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left"></span>
+  </a>
+  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right"></span>
+  </a>
+</div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="modal fade bs-example-modal-md" tabindex="-1" role="dialog" aria-labelledby="myMediumModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-md">
+    <div class="modal-content">
+      <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+
+  
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner">
+    <div class="item active">
+     <img class="img-responsive" src="img/back_schedule.jpg" style="width:100%;height:250px" alt="...">
+      <div class="carousel-caption">
+        <h2>8:30am to 9:00am</h2>
+		<h3>Breakfast</h3>
+      </div>
+    </div>
+    <div class="item">
+      <img class="img-responsive" src="img/back_schedule.jpg" style="width:100%;height:250px" alt="...">
+      <div class="carousel-caption">
+        <h2>9:00am to 11:00am</h2>
+		<h3>Plenary Session III: Solid Waste Management </h3> 
+      </div>
+    </div>
+     <div class="item">
+      <img class="img-responsive"  src="img/back_schedule.jpg" style="width:100%;height:250px" alt="...">
+      <div class="carousel-caption">
+        <h2>11:00am to 11:15am</h2>
+		<h3>Hi Tea & Health Break</h3>
+      </div>
+    </div>
+	<div class="item">
+      <img class="img-responsive"  src="img/back_schedule.jpg" style="width:100%;height:250px" alt="...">
+      <div class="carousel-caption">
+        <h2>11:15am to 1:15pm</h2>
+		<h3>Plenary Session IV:  Air Pollution and Quality Modelling</h3>
+      </div>
+    </div>
+	<div class="item">
+      <img class="img-responsive"  src="img/back_schedule.jpg" style="width:100%;height:250px" alt="...">
+      <div class="carousel-caption">
+        <h2>1:15pm to 2:15pm</h2>
+		<h3>Lunch Break</h3>
+      </div>
+    </div>
+	<div class="item">
+      <img class="img-responsive"  src="img/back_schedule.jpg" style="width:100%;height:250px" alt="...">
+      <div class="carousel-caption">
+        <h2>2:15pm to 5:30pm</h2>
+		<h3>Concurrent Technical Sessions</h3>
+      </div>
+    </div>
+	
+  </div>
+
+  <!-- Controls -->	
+   <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left"></span>
+  </a>
+  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right"></span>
+  </a>
+</div>
+    </div>
+  </div>
+</div>
+</div>
+
+
+
+
+	
+	<!---------------->
+	
+	<br>
+	<div class="container">
+	<a href="img/RACEESchedule.pdf"><h4 style="float:right;color:red;margin-right:15px;"><span class="glyphicon glyphicon-download" ></span> Download Schedule</h4></a>
+	<br><br>
+            <div class="col-sm-12">
+
+
+
+                <div class="bs-calltoaction bs-calltoaction-primary">
+                    <div class="row">
+                        <div class="col-md-9 cta-contents">
+                            <h1 class="cta-title">Plenary Session-1</h1>
+							<h3 class="cta-title">Water Conservation and Recycling</h3>
+							
+							<h3 class="cta-title"> 4 March 2017</h3>
+							<h4 class="cta-title">11:30am to 1:30pm</h4>
+                            <!--<div class="cta-desc">
+                                <p>Describe the action here.</p>
+                                <p>Describe the action here.</p>
+                                <p>Describe the action here.</p>
+                            </div>-->
+                        </div>
+                        <div class="col-md-3 cta-button">
+                            <button  class="btn btn-lg btn-block btn-primary" data-toggle="collapse" data-target="#hidden_schedule1">Schedule</button>
+                        </div>
+						
+                     </div>
+					
+                </div>
+				 <div id="hidden_schedule1" class="collapse" >
+				 <h3>Time : 11:30am to 12:20pm</h3><h4>Plenary Speaker 1 : Mr Satijn H. M. C.: “Multi Strategic Planning for Water Security: A Global Scenario”</h4>  
+				 <h3>Time : 12:20pm to 1:15pm</h3><h4>Plenary Speaker 2 : Prof. M.S. Mohan Kumar “Smart Water Management”</h4>  
+				 <h3>Time : 1:15pm to 1:30pm</h3><h4>Question & Answer and Session Summary  </h4>  
+				 <h3>Time : 1:30pm to 2:30pm</h3><h4>Lunch Break</h4>  
+				
+
+				</div>
+
+                
+
+                <div class="bs-calltoaction bs-calltoaction-success">
+                    <div class="row">
+                        <div class="col-md-9 cta-contents">
+                            <h1 class="cta-title">Plenary Session-2</h1>
+							<h3 class="cta-title"> Civil Engineering</h3>
+							<h3 class="cta-title"> 4 March 2017</h3>
+							<h4 class="cta-title"> 2.30pm-4.30pm</h4>
+                            <!--<div class="cta-desc">
+                                <p>Describe the action here.</p>
+                                <p>Describe the action here.</p>
+                                <p>Describe the action here.</p>
+                            </div>-->
+                        </div>
+                        <div class="col-md-3 cta-button">
+                            <a class="btn btn-lg btn-block btn-success" data-toggle="collapse" data-target="#hidden_schedule2">Schedule</a>
+                        </div>
+                     </div>
+                </div>
+				
+				<div id="hidden_schedule2" class="collapse" >
+				
+				
+				
+				<h3>Time : 2.30pm-3.20pm</h3><h4>Plenary Speaker 1: Mr Thijs Edelkoort: “Micro and Macro aspects for building sound Infrastructure- An international  Scenario” </h4>
+				<h3>Time : 3.25pm-4.15pm</h3><h4>Plenary Speaker 2: Mr. Umesh Dhargalkar: “Essentials of redevelopment of infrastructure – An Indian Scenario”
+</h4>
+				<h3>Time : 4.15pm-4.30pm</h3><h4>Question & Answer and Session Summary
+</h4>
+</div>
+                <div class="bs-calltoaction bs-calltoaction-warning">
+                    <div class="row">
+                        <div class="col-md-9 cta-contents">
+                             <h1 class="cta-title">Technical Session-1</h1>
+							<h3 class="cta-title">Civil Engineering </h3>
+							<h3 class="cta-title">4 March 2017 </h3>
+							<h4 class="cta-title">4.30pm-6.30pm
+</h4>
+							<!--<div class="cta-desc">
+                                <p>Describe the action here.</p>
+                                <p>Describe the action here.</p>
+                                <p>Describe the action here.</p>
+                            </div>-->
+                        </div>
+                        <div class="col-md-3 cta-button">
+                            <a  class="btn btn-lg btn-block btn-warning" data-toggle="collapse" data-target="#hidden_schedule3">Schedule</a>
+                        </div>
+                     </div>
+                </div>
+				
+				<div id="hidden_schedule3" class="collapse" >
+				<h3>Time : 4.30pm-5.45pm</h3><h4>Featured Speakers</h4>
+				<h3>Time : 5.45pm-6.30pm</h3><h4>Invited Papers</h4>
+</h4>
+				<h3>Time : 7.30pm– 9.30pm</h3><h4>Banquet Dinner</h4>
+</div>
+				
+                <div class="bs-calltoaction bs-calltoaction-danger">
+                    <div class="row">
+                        <div class="col-md-9 cta-contents">
+							<h1 class="cta-title">Plenary Session-3</h1>
+                            <h3 class="cta-title">Solid Waste Management </h3>
+							<h3 class="cta-title">5 March 2017</h3>
+							<h4 class="cta-title">9.00am-11.00am
+</h4>
+						<!--<div class="cta-desc">
+                                <p>Describe the action here.</p>
+                                <p>Describe the action here.</p>
+                                <p>Describe the action here.</p>
+                            </div>-->
+                        </div>
+                        <div class="col-md-3 cta-button">
+                            <a class="btn btn-lg btn-block btn-danger" data-toggle="collapse" data-target="#hidden_schedule4">Schedule</a>
+                        </div>
+                     </div>
+                </div>
+				<div id="hidden_schedule4" class="collapse" >
+				<h3>Time : 9.05am-9.55am</h3><h4>Plenary Speaker 1. Mr. Valentin Post: “Conflict resolution approaches for Integrated Solid Waste Management- An international  Scenario”</h4>
+				<h3>Time : 10.00am-10.50am</h3><h4>Plenary Speaker 2.  Dr. Kulwant Singh: “Integrated Urban Infrastructure Development for Solid Waste Management – An Indian Scenario”</h4>
+</h4>
+				<h3>Time : 10.50am-11.00am </h3><h4>Question & Answer and Session Summary  </h4>
+
+<h3>Time : 11:00am to 11:15am</h3><h4>Hi Tea & Health Break</h4>
+            </div>
+			
+			
+			 <div class="bs-calltoaction bs-calltoaction-info">
+                    <div class="row">
+                        <div class="col-md-9 cta-contents">
+							<h1 class="cta-title">Plenary Session-4</h1>
+                            <h3 class="cta-title">Air Pollution and Quality Modelling </h3>
+							<h3 class="cta-title">5 March 2017</h3>
+							<h4 class="cta-title">11.15am-1.15pm
+
+</h4>
+						<!--<div class="cta-desc">
+                                <p>Describe the action here.</p>
+                                <p>Describe the action here.</p>
+                                <p>Describe the action here.</p>
+                            </div>-->
+                        </div>
+                        <div class="col-md-3 cta-button">
+                            <a class="btn btn-lg btn-block btn-info" data-toggle="collapse" data-target="#hidden_schedule5">Schedule</a>
+                        </div>
+                     </div>
+                </div>
+				<div id="hidden_schedule5" class="collapse" >
+				<h3>Time : 11.15am-12.05pm</h3><h4>Plenary Speaker 1. Dr. Shishir Sable: “Multi Strategic Planning for Sustainable Air Quality: A Global Scenario”</h4>
+				<h3>Time : 12.05pm-12.55pm</h3><h4>Plenary Speaker 2. Dr. Vidyadhar Motghare “Planning for Air Pollution Control Strategy : An Indian Scenario.”
+</h4>
+</h4>
+				<h3>Time : 12.55pm-1.15pm</h3><h4>Question & Answer and Session Summary  </h4>
+
+				<h3>Time : 1.15pm-2.15pm</h3><h4>Lunch Break</h4>
+            </div>
+			
+			
+			
+			<div class="bs-calltoaction bs-calltoaction-success">
+                    <div class="row">
+                        <div class="col-md-9 cta-contents">
+                            <h1 class="cta-title">Concurrent Technical Sessions</h1>
+							<h4 class="cta-title"> Civil Engineering + Water conservation and Recycling + Solid Waste Management 
+& Air Pollution and Quality Modelling</h4>
+							<h3 class="cta-title"> 5 March 2017</h3>
+<h4 class="cta-title">2.15pm-5.30pm
+
+</h4>
+                            <!--<div class="cta-desc">
+                                <p>Describe the action here.</p>
+                                <p>Describe the action here.</p>
+                                <p>Describe the action here.</p>
+                            </div>-->
+                        </div>
+                        <div class="col-md-3 cta-button">
+                            <a class="btn btn-lg btn-block btn-success" data-toggle="collapse" data-target="#hidden_schedule6">Schedule</a>
+                        </div>
+                     </div>
+                </div>
+				
+				<div id="hidden_schedule6" class="collapse" >
+				<h3>Time : 2.15pm-3.45pm </h3><h4>Featured Speakers</h4>
+				<h3>Time : 3.45pm-4.00pm</h3><h4>Hi Tea & Health Break
+</h4>
+				<h3>Time : 4.00pm-5.30pm</h3><h4>Invited Papers</h4>
+				<h3>Time : 5.30pm-6.15pm</h3><h4>Quick Feed Back and Valedictory</h4>
+</div>
+        </div>
+	
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	 <!--=========== BEGIN FOOTER SECTION ================-->
+  <!--=========== BEGIN FOOTER SECTION ================-->
+    <footer id="footer">
+      <!-- Start footer top area -->
+      <div class="footer_top">
+        <div class="container">
+          <div class="row">
+            
+            <div class="col-ld-4  col-md-4 col-sm-4">
+              <div class="single_footer_widget">
+                <h3>Links</h3>
+                <ul class="footer_widget_nav">
+                  <li><a href="call_for_papers.html">Call For Papers</a></li>
+                  <li><a href="registrations.html">Registration</a></li>
+                  <li><a href="registrations.html">Payment Details</a></li>
+                  
+                </ul>
+              </div>
+            </div>
+            <div class="col-ld-4  col-md-4 col-sm-4">
+              <div class="single_footer_widget">
+                <h3>Others</h3>
+                <ul class="footer_widget_nav">
+                  <li><a href="theme.html">Themes of Conference</a></li>
+                  <li><a href="vmo.html">VMO</a></li>
+                  <li><a href="gallery.html">Gallery</a></li>
+                  
+                </ul>
+              </div>
+            </div>
+            <div class="col-ld-4  col-md-4 col-sm-4">
+              <div class="single_footer_widget">
+                <h3>Connect Us On</h3>
+                <ul class="footer_social">
+                  <li><a data-toggle="tooltip" data-placement="top" title="Facebook" class="soc_tooltip" href="https://www.facebook.com/Civil-DepartmentWCESangli-250199982068871/"><i class="fa fa-facebook"></i></a></li>
+                  <li><a data-toggle="tooltip" data-placement="top" title="Google+" class="soc_tooltip"  href="#"><i class="fa fa-google-plus"></i></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End footer top area -->
+
+      <!-- Start footer bottom area -->
+      <div class="footer_bottom">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-6">
+              <div class="footer_bootomLeft">
+                <p> Developed By - Shubham Anil Hupare</p>
+
+              </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6">
+              <div class="footer_bootomRight">
+                <p><a href="http://walchandsangli.ac.in" rel="nofollow">Walchand College of Engg. Sangli</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End footer bottom area -->
+    </footer>
+    <!--=========== END FOOTER SECTION ================--> 
+
+  
+  
+
+    <!-- Javascript Files
+    ================================================== -->
+
+    <!-- initialize jQuery Library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- Preloader js file -->
+    <script src="js/queryloader2.min.js" type="text/javascript"></script>
+    <!-- For smooth animatin  -->
+    <script src="js/wow.min.js"></script>  
+    <!-- Bootstrap js -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- slick slider -->
+    <script src="js/slick.min.js"></script>
+    <!-- superslides slider -->
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/jquery.animate-enhanced.min.js"></script>
+    <script src="js/jquery.superslides.min.js" type="text/javascript" charset="utf-8"></script>   
+    <!-- for circle counter -->
+    <script src='https://cdn.rawgit.com/pguso/jquery-plugin-circliful/master/js/jquery.circliful.min.js'></script>
+    <!-- Gallery slider -->
+    <script type="text/javascript" language="javascript" src="js/jquery.tosrus.min.all.js"></script>   
+   
+    <!-- Custom js-->
+    <script src="js/custom.js"></script>
+    <!--=============================================== 
+    Template Design By WpFreeware Team.
+    Author URI : http://www.wpfreeware.com/
+    ====================================================-->
+
+
+  </body>
+</html>

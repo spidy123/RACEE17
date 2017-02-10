@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  
+    <!-- Basic Page Needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <title>Conference</title>
+
+    <!-- Mobile Specific Metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/icon" href="img/logo.png"/>
+
+    <!-- CSS
+    ================================================== -->       
+    <!-- Bootstrap css file-->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font awesome css file-->
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <!-- Superslide css file-->
+    <link rel="stylesheet" href="css/superslides.css">
+    <!-- Slick slider css file -->
+    <link href="css/slick.css" rel="stylesheet"> 
+    <!-- Circle counter cdn css file -->
+    <link rel='stylesheet prefetch' href='https://cdn.rawgit.com/pguso/jquery-plugin-circliful/master/css/jquery.circliful.css'>  
+    <!-- smooth animate css file -->
+    <link rel="stylesheet" href="css/animate.css"> 
+    <!-- preloader -->
+    <link rel="stylesheet" href="css/queryLoader.css" type="text/css" />
+    <!-- gallery slider css -->
+    <link type="text/css" media="all" rel="stylesheet" href="css/jquery.tosrus.all.css" />    
+    <!-- Default Theme css file -->
+    <link id="switcher" href="css/themes/default-theme.css" rel="stylesheet">
+    <!-- Main structure css file -->
+    <link href="style.css" rel="stylesheet">
+   
+    <!-- Google fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet' type='text/css'>   
+    <link href='http://fonts.googleapis.com/css?family=Varela' rel='stylesheet' type='text/css'>    
+
+   <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Francois+One" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Alegreya" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=IM+Fell+English+SC" rel="stylesheet">
+
+ <link href="https://fonts.googleapis.com/css?family=Hammersmith+One" rel="stylesheet">
+
+  </head>
+  <style>
+   </style>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
+</script>
+<style>
+#aboutUs{
+min-height:100%;
+}
+.twPc-div {
+    background: #fff none repeat scroll 0 0;
+    border: 1px solid #e1e8ed;
+    border-radius: 6px;
+    height: 100%;
+    max-width: 100$; // orginal twitter width: 290px;
+}
+.twPc-bg {
+    background-image: url("https://pbs.twimg.com/profile_banners/50988711/1384539792/600x200");
+    background-position: 0 50%;
+    background-size: 100% auto;
+    border-bottom: 1px solid #e1e8ed;
+    border-radius: 4px 4px 0 0;
+    height: 120px;
+    width: 100%;
+}
+.twPc-block {
+    display: block !important;
+}
+.twPc-button {
+    margin: -35px -10px 0;
+    text-align: right;
+    width: 100%;
+}
+.twPc-avatarLink {
+    background-color: #fff;
+    border-radius: 6px;
+    display: inline-block !important;
+    float: left;
+    margin: -30px 5px 0 8px;
+    max-width: 100%;
+    padding: 1px;
+    vertical-align: bottom;
+}
+.twPc-avatarImg {
+    border: 2px solid #fff;
+    border-radius: 7px;
+    box-sizing: border-box;
+    color: #fff;
+    height:200px;
+    width: 200px;
+}
+.twPc-divUser {
+    margin: 20px 0 0;
+}
+.twPc-divName {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 21px;
+	
+}
+.twPc-divName a {
+    color: inherit !important;
+	margin-left:10px;
+	}
+.twPc-divStats {
+    margin-left: 11px;
+    padding: 10px 0;
+}
+.twPc-Arrange {
+    box-sizing: border-box;
+    display: table;
+    margin: 0;
+    min-width: 100%;
+    padding: 0;
+    table-layout: auto;
+}
+ul.twPc-Arrange {
+    list-style: outside none none;
+    margin: 0;
+    padding: 0;
+}
+.twPc-ArrangeSizeFit {
+    display: table-cell;
+    padding: 0;
+    vertical-align: top;
+}
+.twPc-ArrangeSizeFit a:hover {
+    text-decoration: none;
+}
+.twPc-StatValue {
+    display: block;
+    font-size: 18px;
+    font-weight: 500;
+    transition: color 0.15s ease-in-out 0s;
+}
+.twPc-StatLabel {
+    color: #8899a6;
+    font-size: 10px;
+    letter-spacing: 0.02em;
+    overflow: hidden;
+    text-transform: uppercase;
+    transition: color 0.15s ease-in-out 0s;
+}
+.box-content li{
+font-size:20px;
+font-family: "Times New Roman", Times, serif;
+}
+.box-content ul{
+	padding-left:20px;
+}
+.box-content p{
+	font-size:15px;
+	
+}
+</style>
+  <body>    
+
+    <!-- SCROLL TOP BUTTON -->
+    <a class="scrollToTop" href="#"></a>
+    <!-- END SCROLL TOP BUTTON -->
+
+    <!--=========== BEGIN HEADER SECTION ================-->
+   <header id="header">
+      <!-- BEGIN MENU -->
+	  
+	  
+      <div class="menu_area">
+	  
+	    <!-- Second navbar for categories -->
+    <nav class="navbar navbar-default" style="background-color:#E0E0E0
+">
+      <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+       
+    
+        <!-- Collect the nav links, forms, and other content for toggling -->
+       <div class="row">
+	   <div class="col-sm-8">
+	   <h3 style="color:blue;font-family: 'Merriweather', serif;
+"> International Conference On Recent advances in Civil and Environmental Engineering</h3><h4 style="color:blue;font-family: 'Merriweather', serif;
+">4-5 March 2017, Sangli, India</h4>
+      </div><!-- /.container -->
+      <div class="col-sm-2">
+	  <img src="img/logo.png" width="140" height="100"></img></div><div class="col-sm-2"><br><h2 style="color:blue">RACEE2017</h2>
+	  </div>
+	  </div>
+	  </div>
+	</nav><!-- /.navbar -->
+        <nav class="navbar navbar-default " role="navigation" > 
+		<div class="container">
+           
+			<div class="navbar-header">
+              <!-- FOR MOBILE VIEW COLLAPSED BUTTON -->
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+			  
+              <!-- LOGO -->
+              <!-- TEXT BASED LOGO -->
+              <a class="navbar-brand" href="index.html">RACEE<span>2017</span></a>              
+              <!-- IMG BASED LOGO  -->
+               <!-- <a class="navbar-brand" href="index.html"><img src="img/logo.png" alt="logo"></a>  -->            
+                     
+            </div>
+			
+            <div id="navbar" class="navbar-collapse collapse">
+              <ul id="top-menu" class="nav navbar-nav navbar-right main-nav">
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Home<span class="caret"></span></a>
+                  <ul class="dropdown-menu" role="menu">
+                    <li><a href="#aboutUs">About College and Department</a></li>
+					<li><a href="#studentsTestimonial">Departmental VMO's</a></li>
+                    <li><a href="#ourCourses">Speakers</a></li>
+                    
+					
+                  </ul>
+                </li>   
+				 <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Imp.information<span class="caret"></span></a>
+                  <ul class="dropdown-menu" role="menu">
+                    <li><a href="call_for_papers.html">Call for papers</a></li>
+                    <li><a href="theme.html">Themes of Conference</a></li>
+                    <li><a href="registrations.html">Registration and Payment</a></li>
+					
+                  </ul>
+                </li>   
+				 <li class="dropdown">
+                  <a href="persons.html">Committee</a>
+                  
+                </li> 
+                <li><a href="downloads.html">Downloads</a></li>                
+				  	
+                <li><a href="gallery.html">Gallery</a></li>                
+                
+
+                <li><a href="contact.php">Contact</a></li>
+              </ul>           
+            </div><!--/.nav-collapse -->
+          </div>     
+        </nav>  
+      </div>
+      <!-- END MENU -->    
+    </header>
+	<br><br><br><br><br>
+	
+<div class="container">
+<div class="row">
+
+<!-- code start -->
+<div class="twPc-div">
+    <a class="twPc-bg twPc-block"></a>
+
+	<div>
+		
+
+		<a title="Mert Salih Kaplan" href="https://twitter.com/mertskaplan" class="twPc-avatarLink">
+			<img alt="Mert Salih Kaplan" src="img/Edelkoort.jpg" class="twPc-avatarImg">
+		</a>
+
+		<div class="twPc-divUser">
+			<div class="twPc-divName">
+				<a href=""><span class="glyphicon glyphicon-user"></span>   Ir. Th. (Thijs) Edelkoort</a>
+				<br>
+				<a href=""><span class="glyphicon glyphicon-calendar"></span>   1954</a>
+				<br>
+				<!--<a href=""><span class="glyphicon glyphicon-home"></span>   128, National Media Centre, Shankar Chowk, NH-8, Gurgaon-122002 (Haryana), India</a>
+				<br>
+				<a href=""> <span class="glyphicon glyphicon-earphone"></span>   +91-124-2565622,+91-9871953232</a>
+			--></div>
+			
+		</div>
+
+		<div class="twPc-divStats">
+			<div class="row">
+                <div class="col-md-12 text-center">
+                    <div class="box">
+                        <div class="box-content" style="text-align:left;">
+                            <hr />
+							<p><b>Function</b><br>
+Thijs works working as a consultant within the Organization
+and Housing Consultancy Business Unit.</p>
+							<p><b>Experience</b><br>
+In his work, Thijs focuses on both the micro and macro
+levels. He has extensive experience in assignments for
+which new concepts have been an important principle. He
+translates them into programs of requirements and
+feasibility studies that result in a business case, but also in
+concepts that are then further developed by architects.
+From these perspectives, Thijs generally work across
+discipline boundaries and views all facets of the assignment,
+while collaborating with requisite specialists.<br><br>
+Before coming to AT Osborne, Thijs worked at several
+consultancies as well as the State Property Agency. He has
+performed assignments in many sectors such as education,
+culture, municipalities, provinces, national government,
+semi-public institutions, housing construction, non-profit,
+industry and financial service provision.
+</p>					
+						<p><b>Sustainability</b><br>
+Immediately after his graduation he was one of the
+competitors s of the European Solar Energy Design Contest.
+During his period at the State Property Agency he did
+research on Glass Houses and Atria in office buildings. In
+one of the projects at AT Osborne he was concept designer
+of the TNT Head Quarter, one of the first BREEAM excellent
+office buildings in the Netherlands.</p>
+						<p><b>Education</b><br>
+Thijs studied Architecture at TU Delft and graduated with
+Price. Then he developed his skills in Housing Management,
+which was still in its infancy at that time, and did postgraduate
+work in Corporate Real Estate and Value
+Management.</p>
+						<p><b>Projects</b><br>
+In his projects, Thijs likes working as part of a team, where
+he prefers to serve as the process manager. He supports
+the customer in the communication with all the
+stakeholders within his organization. This can include both
+managers and employees. In relevant projects, Thijs has
+found himself operating in the gray area between
+technique based on hard figures and activities involving
+employees, students or visitors involved in their primary
+processes.<br><br>
+Within AT Osborne, Thijs is responsible for creating a
+revised method for developing Programs of Requirements.
+The objective was to develop a document that all interested
+parties can read and understand, but is still robust enough
+to serve as a contract document for integrated contract
+forms. In the interim, he has amassed considerable
+experience in executing this method. Thijs is a certified
+Value Manager.<br><br>
+The method Thijs developed is called P360. This is a work
+method that not only records the requirements, but also
+specifies the ambitions behind these requirements: the why
+behind the imposed requirements. Thanks to this coupling,
+ambitions can be tracked even after some time and
+contradictory requirements can be traced back to the basic
+principles.</p>
+					<p><b>Managerial experience</b><br>
+Thijs is a member of the Supervisory Council of the
+Beauforthuis in Austerlitz, Zeist with a specific focus on
+building management.
+Prior to this, he was a member of the board of the Pallas
+Athene primary school in Amersfoort. In that function, he
+was responsible for initiating and realizing new
+construction in collaboration with a child care facility and
+the City of Amersfoort.</p>
+
+<h1 class="tag-title" style="text-align:left;font-family: 'Alegreya', serif;">Relevant projects at AT Osborne</h1>
+<hr/>
+<ul>
+		<li style="font-family: 'Hammersmith One', sans-serif;">Chamber of Commerce (2016)</li>
+		<br>
+		<ul style="list-style-type:disc">
+		<li>Developed a configuration concept for the ‘entrepreneur’s plaza’ that focused on the connection between the Service
+Model and the configuration, in the Blaak 40 national monument in Rotterdam.</li>
+<li>Detailed the peripheral conditions for the ‘experience area’ in relation to the Kolb learning model</li>
+		</ul>
+		
+		<br>
+		<li style="font-family: 'Hammersmith One', sans-serif;">Ministry of Infrastructure and the Environment (2013)</li>
+<br>
+		<ul style="list-style-type:disc">
+		<li>Conducted a tender analysis for the Koningskade and Plesmanweg buildings in The Hague for centralizing housing</li>
+	<li>Detailed peripheral conditions for a configuration concept for anchor points for informal consultation and touch down
+workplaces.</li>
+</ul>
+
+<br>
+		<li style="font-family: 'Hammersmith One', sans-serif;">Dudok Wonen, Hilversum (2010-2011)</li>
+<br>
+		<ul style="list-style-type:disc">
+		<li>Explored the possibilities of a housing concept in conformance with The New Work within the physical framework of
+The Milk Factory on the Larenseweg in Hilversum.</li>
+		<li>Detailed the usage options for an existing factory building that is on the list of national monuments.</li>
+	    <li>Developed a program of requirements</li>	
+		</ul>
+		
+		<br>
+		<li style="font-family: 'Hammersmith One', sans-serif;">The Ploeg, Bergeyk (2009-2010)</li>
+<br>
+		<ul style="list-style-type:disc">
+<li>Quartermaster for the development and repurposing of the De Ploeg building for the Woninc Housing Corporation.</li>
+	<li>Developed a use concept for the building.</li>	
+	<li>Conversations with potential parties who wanted to operate within this concept, and with the city government as an
+important stakeholder.</li>
+</ul>
+
+<br>
+		<li style="font-family: 'Hammersmith One', sans-serif;">Central Judicial Collection Bureau (2008-2009)</li>
+<br>
+		<ul style="list-style-type:disc">
+<li>Project leader for the Working Differently project</li>
+<li>Developed an organization-oriented work environment concept.</li>
+<li>Embedded the principles within the entire organization.</li>
+<li>Managed the renovation project.</li>
+<li>Implemented the adopted concept using workshops for employees, management teams and directors.</li>
+</ul>
+
+<br>
+		<li style="font-family: 'Hammersmith One', sans-serif;">TNT-Real Estate (2007)</li>
+<br>
+		<ul style="list-style-type:disc">
+		<li>Developed a corporate standard for housing in Europe based on the Planet-me concept. CO2 reduction, specifically the
+question of how this must be incorporated into the design, was the focal point of this standard.</li>
+<li>Developed a program of requirements based on TNT’s mission, strategy and corporate objectives.</li>
+</ul>
+
+<br>
+		<li style="font-family: 'Hammersmith One', sans-serif;">North Community College (2006)</li>
+<br>
+		<ul style="list-style-type:disc">
+		<li>Developed a housing concept for integral housing for ROC of Amsterdam, a VMBO course for Bredero College and
+Building Academy.</li>
+<li>Conducted a feasibility study including a financial analysis.</li>
+<li>Added a number of (semi-) commercial functions in collaboration with the CZAN project developer.</li>
+</ul>
+
+<br>
+
+<li style="font-family: 'Hammersmith One', sans-serif;">Rabobank Westland; headquarters (2005-2006)</li>
+<br>
+		<ul style="list-style-type:disc">
+		<li>Developed an organization-oriented work environment-concept for the new Rabobank Westland headquarters to be
+constructed.</li>
+<li>Made the preparations for implementation of the concept.</li>
+<li>Tested the existing design, which was originally intended for housing the office in De Lier.</li>
+</ul>
+
+<br>
+
+<li style="font-family: 'Hammersmith One', sans-serif;">Foundation ANNO (2005)</li>
+<br>
+		<ul style="list-style-type:disc">
+		<li>Interviews with architects H. Henket, K. Kaan, S. Soeters, in which the urban developer situation and programmatic
+principles were used. Their reaction to these factors was the focal point of the interviews.</li>
+<li>Developed and detailed the principles for the new construction concept for the Boulevard on the Anna van Buerenplein
+in The Hague.</li>
+</ul>
+
+<br>
+
+<li style="font-family: 'Hammersmith One', sans-serif;">Thomas Cook, headquarters Hoofddorp (2001)</li>
+<br>
+		<ul style="list-style-type:disc">
+		<li>Translated the directors’ strategic vision into a "vision paper" for the implementation of a new workplace concept. This
+document articulates the principles for the implementation, which focuses on retaining and integrating the personnel
+after the merger and relocation.</li>
+
+</ul>
+
+<br>
+
+<li style="font-family: 'Hammersmith One', sans-serif;">Euronext (previously AEX) (2000)</li>
+<br>
+		<ul style="list-style-type:disc">
+		<li>Managed the cultural shift after implementing the flexible workplace concept.</li>
+
+</ul>
+
+<br>
+
+							<br/>
+                        </div>
+                    </div>
+                </div>
+				</div>
+				
+				
+							<br />
+                        </div>
+						<hr />
+                    </div>
+                </div>
+				</div>
+				
+		</div>
+	</div>
+</div>
+<!-- code end -->
+</div>
+</div>
+ <!--=========== BEGIN FOOTER SECTION ================-->
+  <!--=========== BEGIN FOOTER SECTION ================-->
+    <footer id="footer">
+      <!-- Start footer top area -->
+      <div class="footer_top">
+        <div class="container">
+          <div class="row">
+            
+            <div class="col-ld-4  col-md-4 col-sm-4">
+              <div class="single_footer_widget">
+                <h3>Links</h3>
+                <ul class="footer_widget_nav">
+                  <li><a href="call_for_papers.html">Call For Papers</a></li>
+                  <li><a href="registrations.html">Registration</a></li>
+                  <li><a href="registrations.html">Payment Details</a></li>
+                  
+                </ul>
+              </div>
+            </div>
+            <div class="col-ld-4  col-md-4 col-sm-4">
+              <div class="single_footer_widget">
+                <h3>Others</h3>
+                <ul class="footer_widget_nav">
+                  <li><a href="theme.html">Themes of Conference</a></li>
+                  <li><a href="gallery.html">Gallery</a></li>
+                  
+                </ul>
+              </div>
+            </div>
+            <div class="col-ld-4  col-md-4 col-sm-4">
+              <div class="single_footer_widget">
+                <h3>Connect Us On</h3>
+                <ul class="footer_social">
+                  <li><a data-toggle="tooltip" data-placement="top" title="Facebook" class="soc_tooltip" href="https://www.facebook.com/Civil-DepartmentWCESangli-250199982068871/"><i class="fa fa-facebook"></i></a></li>
+                  <li><a data-toggle="tooltip" data-placement="top" title="Google+" class="soc_tooltip"  href="#"><i class="fa fa-google-plus"></i></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End footer top area -->
+
+      <!-- Start footer bottom area -->
+      <div class="footer_bottom">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-6">
+              <div class="footer_bootomLeft">
+                                <p> Developed By - Shubham Anil Hupare</p>
+
+              </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6">
+              <div class="footer_bootomRight">
+                <p><a href="http://walchandsangli.ac.in" rel="nofollow">Walchand College of Engg. Sangli</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End footer bottom area -->
+    </footer>
+    <!--=========== END FOOTER SECTION ================--> 
+
+  
+  
+
+    <!-- Javascript Files
+    ================================================== -->
+
+    <!-- initialize jQuery Library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- Preloader js file -->
+    <script src="js/queryloader2.min.js" type="text/javascript"></script>
+    <!-- For smooth animatin  -->
+    <script src="js/wow.min.js"></script>  
+    <!-- Bootstrap js -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- slick slider -->
+    <script src="js/slick.min.js"></script>
+    <!-- superslides slider -->
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/jquery.animate-enhanced.min.js"></script>
+    <script src="js/jquery.superslides.min.js" type="text/javascript" charset="utf-8"></script>   
+    <!-- for circle counter -->
+    <script src='https://cdn.rawgit.com/pguso/jquery-plugin-circliful/master/js/jquery.circliful.min.js'></script>
+    <!-- Gallery slider -->
+    <script type="text/javascript" language="javascript" src="js/jquery.tosrus.min.all.js"></script>   
+   
+    <!-- Custom js-->
+    <script src="js/custom.js"></script>
+    <!--=============================================== 
+    Template Design By WpFreeware Team.
+    Author URI : http://www.wpfreeware.com/
+    ====================================================-->
+
+
+  </body>
+</html>

@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  
+    <!-- Basic Page Needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <title>Conference</title>
+
+    <!-- Mobile Specific Metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/icon" href="img/logo.png"/>
+
+    <!-- CSS
+    ================================================== -->       
+    <!-- Bootstrap css file-->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font awesome css file-->
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <!-- Superslide css file-->
+    <link rel="stylesheet" href="css/superslides.css">
+    <!-- Slick slider css file -->
+    <link href="css/slick.css" rel="stylesheet"> 
+    <!-- Circle counter cdn css file -->
+    <link rel='stylesheet prefetch' href='https://cdn.rawgit.com/pguso/jquery-plugin-circliful/master/css/jquery.circliful.css'>  
+    <!-- smooth animate css file -->
+    <link rel="stylesheet" href="css/animate.css"> 
+    <!-- preloader -->
+    <link rel="stylesheet" href="css/queryLoader.css" type="text/css" />
+    <!-- gallery slider css -->
+    <link type="text/css" media="all" rel="stylesheet" href="css/jquery.tosrus.all.css" />    
+    <!-- Default Theme css file -->
+    <link id="switcher" href="css/themes/default-theme.css" rel="stylesheet">
+    <!-- Main structure css file -->
+    <link href="style.css" rel="stylesheet">
+   
+    <!-- Google fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet' type='text/css'>   
+    <link href='http://fonts.googleapis.com/css?family=Varela' rel='stylesheet' type='text/css'>    
+
+   <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Francois+One" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Alegreya" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=IM+Fell+English+SC" rel="stylesheet">
+
+ <link href="https://fonts.googleapis.com/css?family=Hammersmith+One" rel="stylesheet">
+
+  </head>
+  <style>
+   </style>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
+</script>
+<style>
+#aboutUs{
+min-height:100%;
+}
+.twPc-div {
+    background: #fff none repeat scroll 0 0;
+    border: 1px solid #e1e8ed;
+    border-radius: 6px;
+    height: 100%;
+    max-width: 100$; // orginal twitter width: 290px;
+}
+.twPc-bg {
+    background-image: url("https://pbs.twimg.com/profile_banners/50988711/1384539792/600x200");
+    background-position: 0 50%;
+    background-size: 100% auto;
+    border-bottom: 1px solid #e1e8ed;
+    border-radius: 4px 4px 0 0;
+    height: 120px;
+    width: 100%;
+}
+.twPc-block {
+    display: block !important;
+}
+.twPc-button {
+    margin: -35px -10px 0;
+    text-align: right;
+    width: 100%;
+}
+.twPc-avatarLink {
+    background-color: #fff;
+    border-radius: 6px;
+    display: inline-block !important;
+    float: left;
+    margin: -30px 5px 0 8px;
+    max-width: 100%;
+    padding: 1px;
+    vertical-align: bottom;
+}
+.twPc-avatarImg {
+    border: 2px solid #fff;
+    border-radius: 7px;
+    box-sizing: border-box;
+    color: #fff;
+    height:200px;
+    width: 200px;
+}
+.twPc-divUser {
+    margin: 20px 0 0;
+}
+.twPc-divName {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 21px;
+	
+}
+.twPc-divName a {
+    color: inherit !important;
+	margin-left:10px;
+	}
+.twPc-divStats {
+    margin-left: 11px;
+    padding: 10px 0;
+}
+.twPc-Arrange {
+    box-sizing: border-box;
+    display: table;
+    margin: 0;
+    min-width: 100%;
+    padding: 0;
+    table-layout: auto;
+}
+ul.twPc-Arrange {
+    list-style: outside none none;
+    margin: 0;
+    padding: 0;
+}
+.twPc-ArrangeSizeFit {
+    display: table-cell;
+    padding: 0;
+    vertical-align: top;
+}
+.twPc-ArrangeSizeFit a:hover {
+    text-decoration: none;
+}
+.twPc-StatValue {
+    display: block;
+    font-size: 18px;
+    font-weight: 500;
+    transition: color 0.15s ease-in-out 0s;
+}
+.twPc-StatLabel {
+    color: #8899a6;
+    font-size: 10px;
+    letter-spacing: 0.02em;
+    overflow: hidden;
+    text-transform: uppercase;
+    transition: color 0.15s ease-in-out 0s;
+}
+.box-content li{
+font-size:20px;
+font-family: "Times New Roman", Times, serif;
+}
+.box-content ul{
+	padding-left:20px;
+}
+.box-content p{
+	font-size:15px;
+	
+}
+</style>
+  <body>    
+
+    <!-- SCROLL TOP BUTTON -->
+    <a class="scrollToTop" href="#"></a>
+    <!-- END SCROLL TOP BUTTON -->
+
+    <!--=========== BEGIN HEADER SECTION ================-->
+    <header id="header">
+      <!-- BEGIN MENU -->
+      <div class="menu_area">
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">  <div class="container">
+            <div class="navbar-header">
+              <!-- FOR MOBILE VIEW COLLAPSED BUTTON -->
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <!-- LOGO -->
+              <!-- TEXT BASED LOGO -->
+              <a class="navbar-brand" href="index.html">RACEE<span>2017</span></a>              
+              <!-- IMG BASED LOGO  -->
+               <!-- <a class="navbar-brand" href="index.html"><img src="img/logo.png" alt="logo"></a>  -->            
+                     
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+              <ul id="top-menu" class="nav navbar-nav navbar-right main-nav">
+                  <li class="dropdown">
+                  <a href="index.html">Home</a>
+                  
+                </li> 
+				 <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Imp.information<span class="caret"></span></a>
+                  <ul class="dropdown-menu" role="menu">
+                    <li><a href="call_for_papers.html">Call for papers</a></li>
+                    <li><a href="theme.html">Themes of Conference</a></li>
+                    <li><a href="registrations.html">Registration and Payment</a></li>
+					
+                  </ul>
+                </li>   
+				 <li class="dropdown">
+                  <a href="persons.html">Committee</a>
+                  
+                </li> 
+				  	
+                <li><a href="gallery.html">Gallery</a></li>                
+                
+
+                <li><a href="contact.php">Contact</a></li>
+              </ul>           
+            </div><!--/.nav-collapse -->
+          </div>     
+        </nav>  
+      </div>
+      <!-- END MENU -->    
+    </header>
+	
+	<br><br><br><br><br>
+	
+<div class="container">
+<div class="row">
+
+<!-- code start -->
+<div class="twPc-div">
+    <a class="twPc-bg twPc-block"></a>
+
+	<div>
+		
+
+		<a title="Mert Salih Kaplan" href="https://twitter.com/mertskaplan" class="twPc-avatarLink">
+			<img alt="Mert Salih Kaplan" src="img/kulwant.jpg" class="twPc-avatarImg">
+		</a>
+
+		<div class="twPc-divUser">
+			<div class="twPc-divName">
+				<a href=""><span class="glyphicon glyphicon-user"></span>   KULWANT SINGH</a>
+				<br>
+				<a href=""><span class="glyphicon glyphicon-calendar"></span>   18-12-1948</a>
+				<br>
+				<a href=""><span class="glyphicon glyphicon-home"></span>   128, National Media Centre, Shankar Chowk, NH-8, Gurgaon-122002 (Haryana), India</a>
+				<br>
+				<a href=""> <span class="glyphicon glyphicon-earphone"></span>   +91-124-2565622,+91-9871953232</a>
+			</div>
+			
+		</div>
+
+		<div class="twPc-divStats">
+			<div class="row">
+                <div class="col-md-12 text-center">
+                    <div class="box">
+                        <div class="box-content" style="text-align:left;">
+                            <hr />
+							<p><b>Dr. Kulwant Singh</b> is presently CEO of 3R WASTE Foundation (India) – an organisation working in partnership with WASTE Netherlands and Collaborative Working Group on Solid Waste Management based in Switzerland. Dr. Singh earlier served as Chief Technical Adviser for the Water, Sanitation and Infrastructure Branch of UN-Habitat from January 2004 to December 2008. In his role of Chief Technical Adviser he contributed significantly to policy dialogue with partner countries in Asia and the Pacific and in the design and implementation of a large number of water and sanitation initiatives. Since December 2008, Dr. Kulwant Singh has continued to support the work of UN-Habitat as a consultant until December 2015, with particular reference to the urban basic services comprising, water, sanitation, and Solid waste management. In this role, he has supported the Urban Basic Services Branch in the formulation and implementation of projects and dialogue with partner national and city governments. He has also significantly contributed to the normative work of the agency by contributing to papers and publications. He also represented UN-Habitat in various regional and international fora on urban basic services. 
+TEACHING, TRAINING AND CAPACITY BUILDING ENGAGEMENTS/INTERESTS 
+
+Dr. Singh has been a regular visiting faculty at UNESCO-IHE Institute for Water Education, Delft, the Netherlands and Institute for Housing and Urban Development (IHS), Rotterdam, the Netherlands from 2004-2012. </p>
+							<br>
+							<p><b>Media Workshops:</b> As UN-HABITAT staff organized Regional Training Programmes on Water and Sanitation for Water and Sanitation Journalists at New Delhi, India, December 2006, Singapore, June 2007, Tehran (Iran), and Cairo (Egypt) for Journalists from Arab Countries in January 2009.</p>
+							<br>
+							<p><b>International Programme</b> for Mayors on Urban Water and Sanitation Nanjing for Mayors from Asia, Africa, and LAC Countries (November 2008)</p>
+							<br>
+							<p><b>Advocacy and Communication Related:</b> Organization of events (Seminars,  Workshops, Roundtables and Exhibitions) at the WSSD Johannesburg, (2002), Regional Consultation for Water for Asian Cities Programme at New Delhi, (2002), World Water Week in Stockholm (2006, 2007, 2008), World Water Week in Singapore (2008), Asia Pacific Water Summit, Beppu, Japan (December, 2007), World Urban Forum , Nanjing (2008), Barcelona (2006), Asia Pacific Ministerial Conference, New Delhi (2006), Tehran (2008), World Water Forum in Istanbul (March 2009), Mexico (2006), HABITAT-III Conference in Quito (October 2016)</p>
+							<br>
+							<p>Prior to joining UN-Habitat in January 2004, he was Executive Director, Human Settlements Management Institute, New Delhi for 12 years. An urban economist, he was part of the Indian Economic Service from 1971-1992. He has published widely on the topics of urban management and provision of urban basic services.  He has several books to his credit in the field of Water, Sanitation, Waste Management, Infrastructure Development and Urban Management and has published widely in international referred journals in water, sanitation and urban sector. 
+Under his stewardship, 3R WASTE Foundation ((India), has developed a learning guide on Waste Management that includes a generic framework of Integrated Sustainable Waste Management in partnership with WASTE Netherlands. The concept of ISWM well tried in some countries in Africa and Asia has 3 dimensions - comprising of (a) Stakeholders that include Local Authorities, NGOs/CBOs, Service users, Private informal Sector, Private formal sector and Support Agencies (b) Waste System Elements  such as Generation and separation, Collection, Transfer & transport, Treatment and disposal, Reduction, Re-use, Recycling and Recovery and (c) Aspects such as Technical, Environmental, Health, Financial/Economic, Socio-cultural, Institutional, Policy/Legal and Political aspects.
+The state of solid waste management being a reliable indicator for the state of urban governance - reflecting its importance and effect on environment and public health as also its impact on business and economic climate, the Foundation has been aiming at assisting the cities to develop 3R strategies of reducing, reusing and recycling waste and moving towards Zero Waste in our cities.
+Some of his earlier works include: Integrated Urban Infrastructure Development in Asia, Oxford & IBH 
+Publishing Co. Pvt.  Ltd; Urban India in Crisis, New Age International (P) Ltd; Financing and Pricing of Urban Infrastructure, New Age International (P) Ltd 
+His recent research work related to “Mapping Poverty to Reach the Urban Poor” published in SCH 44-4, December 2014 and an Issue Paper on Smart Cities for HABITAT-III. </p>
+							<br />
+							                            
+
+                        </div>
+                    </div>
+                </div>
+				</div>
+				
+				
+							<br />
+                        </div>
+						<hr />
+                    </div>
+                </div>
+				</div>
+				
+		</div>
+	</div>
+</div>
+<!-- code end -->
+</div>
+</div>
+ <!--=========== BEGIN FOOTER SECTION ================-->
+    <footer id="footer">
+      <!-- Start footer top area -->
+      <div class="footer_top">
+        <div class="container">
+          <div class="row">
+            
+            <div class="col-ld-4  col-md-4 col-sm-4">
+              <div class="single_footer_widget">
+                <h3>Links</h3>
+                <ul class="footer_widget_nav">
+                  <li><a href="call_for_papers.html">Call For Papers</a></li>
+                  <li><a href="registrations.html">Registration</a></li>
+                  <li><a href="registrations.html">Payment Details</a></li>
+                  
+                </ul>
+              </div>
+            </div>
+            <div class="col-ld-4  col-md-4 col-sm-4">
+              <div class="single_footer_widget">
+                <h3>Others</h3>
+                <ul class="footer_widget_nav">
+                  <li><a href="theme.html">Themes of Conference</a></li>
+                  <li><a href="gallery.html">Gallery</a></li>
+                  
+                </ul>
+              </div>
+            </div>
+            <div class="col-ld-4  col-md-4 col-sm-4">
+              <div class="single_footer_widget">
+                <h3>Connect Us On</h3>
+                <ul class="footer_social">
+                  <li><a data-toggle="tooltip" data-placement="top" title="Facebook" class="soc_tooltip" href="https://www.facebook.com/Civil-DepartmentWCESangli-250199982068871/"><i class="fa fa-facebook"></i></a></li>
+                  <li><a data-toggle="tooltip" data-placement="top" title="Google+" class="soc_tooltip"  href="#"><i class="fa fa-google-plus"></i></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End footer top area -->
+
+      <!-- Start footer bottom area -->
+      <div class="footer_bottom">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-6">
+              <div class="footer_bootomLeft">
+				                <p> Developed By - Shubham Anil Hupare</p>
+
+              </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6">
+              <div class="footer_bootomRight">
+                <p><a href="http://walchandsangli.ac.in" rel="nofollow">Walchand College of Engg. Sangli</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End footer bottom area -->
+    </footer>
+    <!--=========== END FOOTER SECTION ================--> 
+
+  
+  
+
+    <!-- Javascript Files
+    ================================================== -->
+
+    <!-- initialize jQuery Library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- Preloader js file -->
+    <script src="js/queryloader2.min.js" type="text/javascript"></script>
+    <!-- For smooth animatin  -->
+    <script src="js/wow.min.js"></script>  
+    <!-- Bootstrap js -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- slick slider -->
+    <script src="js/slick.min.js"></script>
+    <!-- superslides slider -->
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/jquery.animate-enhanced.min.js"></script>
+    <script src="js/jquery.superslides.min.js" type="text/javascript" charset="utf-8"></script>   
+    <!-- for circle counter -->
+    <script src='https://cdn.rawgit.com/pguso/jquery-plugin-circliful/master/js/jquery.circliful.min.js'></script>
+    <!-- Gallery slider -->
+    <script type="text/javascript" language="javascript" src="js/jquery.tosrus.min.all.js"></script>   
+   
+    <!-- Custom js-->
+    <script src="js/custom.js"></script>
+    <!--=============================================== 
+    Template Design By WpFreeware Team.
+    Author URI : http://www.wpfreeware.com/
+    ====================================================-->
+
+
+  </body>
+</html>

@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  
+    <!-- Basic Page Needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <title>Conference</title>
+
+    <!-- Mobile Specific Metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/icon" href="img/logo.png"/>
+
+    <!-- CSS
+    ================================================== -->       
+    <!-- Bootstrap css file-->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font awesome css file-->
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <!-- Superslide css file-->
+    <link rel="stylesheet" href="css/superslides.css">
+    <!-- Slick slider css file -->
+    <link href="css/slick.css" rel="stylesheet"> 
+    <!-- Circle counter cdn css file -->
+    <link rel='stylesheet prefetch' href='https://cdn.rawgit.com/pguso/jquery-plugin-circliful/master/css/jquery.circliful.css'>  
+    <!-- smooth animate css file -->
+    <link rel="stylesheet" href="css/animate.css"> 
+    <!-- preloader -->
+    <link rel="stylesheet" href="css/queryLoader.css" type="text/css" />
+    <!-- gallery slider css -->
+    <link type="text/css" media="all" rel="stylesheet" href="css/jquery.tosrus.all.css" />    
+    <!-- Default Theme css file -->
+    <link id="switcher" href="css/themes/default-theme.css" rel="stylesheet">
+    <!-- Main structure css file -->
+    <link href="style.css" rel="stylesheet">
+   
+    <!-- Google fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet' type='text/css'>   
+    <link href='http://fonts.googleapis.com/css?family=Varela' rel='stylesheet' type='text/css'>    
+
+   <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Francois+One" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Alegreya" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=IM+Fell+English+SC" rel="stylesheet">
+
+ <link href="https://fonts.googleapis.com/css?family=Hammersmith+One" rel="stylesheet">
+
+  </head>
+  <style>
+   </style>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
+</script>
+<style>
+#aboutUs{
+min-height:100%;
+}
+.twPc-div {
+    background: #fff none repeat scroll 0 0;
+    border: 1px solid #e1e8ed;
+    border-radius: 6px;
+    height: 100%;
+    max-width: 100$; // orginal twitter width: 290px;
+}
+.twPc-bg {
+    background-image: url("https://pbs.twimg.com/profile_banners/50988711/1384539792/600x200");
+    background-position: 0 50%;
+    background-size: 100% auto;
+    border-bottom: 1px solid #e1e8ed;
+    border-radius: 4px 4px 0 0;
+    height: 120px;
+    width: 100%;
+}
+.twPc-block {
+    display: block !important;
+}
+.twPc-button {
+    margin: -35px -10px 0;
+    text-align: right;
+    width: 100%;
+}
+.twPc-avatarLink {
+    background-color: #fff;
+    border-radius: 6px;
+    display: inline-block !important;
+    float: left;
+    margin: -30px 5px 0 8px;
+    max-width: 100%;
+    padding: 1px;
+    vertical-align: bottom;
+}
+.twPc-avatarImg {
+    border: 2px solid #fff;
+    border-radius: 7px;
+    box-sizing: border-box;
+    color: #fff;
+    height:200px;
+    width: 200px;
+}
+.twPc-divUser {
+    margin: 20px 0 0;
+}
+.twPc-divName {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 21px;
+	
+}
+.twPc-divName a {
+    color: inherit !important;
+	margin-left:10px;
+	}
+.twPc-divStats {
+    margin-left: 11px;
+    padding: 10px 0;
+}
+.twPc-Arrange {
+    box-sizing: border-box;
+    display: table;
+    margin: 0;
+    min-width: 100%;
+    padding: 0;
+    table-layout: auto;
+}
+ul.twPc-Arrange {
+    list-style: outside none none;
+    margin: 0;
+    padding: 0;
+}
+.twPc-ArrangeSizeFit {
+    display: table-cell;
+    padding: 0;
+    vertical-align: top;
+}
+.twPc-ArrangeSizeFit a:hover {
+    text-decoration: none;
+}
+.twPc-StatValue {
+    display: block;
+    font-size: 18px;
+    font-weight: 500;
+    transition: color 0.15s ease-in-out 0s;
+}
+.twPc-StatLabel {
+    color: #8899a6;
+    font-size: 10px;
+    letter-spacing: 0.02em;
+    overflow: hidden;
+    text-transform: uppercase;
+    transition: color 0.15s ease-in-out 0s;
+}
+.box-content li{
+font-size:20px;
+font-family: "Times New Roman", Times, serif;
+}
+.box-content ul{
+	padding-left:20px;
+}
+.box-content p{
+	font-size:15px;
+	
+}
+</style>
+  <body>    
+
+    <!-- SCROLL TOP BUTTON -->
+    <a class="scrollToTop" href="#"></a>
+    <!-- END SCROLL TOP BUTTON -->
+
+    <!--=========== BEGIN HEADER SECTION ================-->
+     <header id="header">
+      <!-- BEGIN MENU -->
+      <div class="menu_area">
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">  <div class="container">
+            <div class="navbar-header">
+              <!-- FOR MOBILE VIEW COLLAPSED BUTTON -->
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <!-- LOGO -->
+              <!-- TEXT BASED LOGO -->
+              <a class="navbar-brand" href="index.html">RACEE<span>2017</span></a>              
+              <!-- IMG BASED LOGO  -->
+               <!-- <a class="navbar-brand" href="index.html"><img src="img/logo.png" alt="logo"></a>  -->            
+                     
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+              <ul id="top-menu" class="nav navbar-nav navbar-right main-nav">
+                  <li class="dropdown">
+                  <a href="index.html">Home</a>
+                  
+                </li> 
+				 <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Imp.information<span class="caret"></span></a>
+                  <ul class="dropdown-menu" role="menu">
+                    <li><a href="call_for_papers.html">Call for papers</a></li>
+                    <li><a href="theme.html">Themes of Conference</a></li>
+                    <li><a href="registrations.html">Registration and Payment</a></li>
+					
+                  </ul>
+                </li>   
+				 <li class="dropdown">
+                  <a href="persons.html">Committee</a>
+                  
+                </li> 
+				  	
+                <li><a href="gallery.html">Gallery</a></li>                
+                
+
+                <li><a href="contact.php">Contact</a></li>
+              </ul>           
+            </div><!--/.nav-collapse -->
+          </div>     
+        </nav>  
+      </div>
+      <!-- END MENU -->    
+    </header>
+	
+	<br><br><br><br><br>
+	
+<div class="container">
+<div class="row">
+
+<!-- code start -->
+<div class="twPc-div">
+    <a class="twPc-bg twPc-block"></a>
+
+	<div>
+		
+
+		<a title="Mert Salih Kaplan" href="https://twitter.com/mertskaplan" class="twPc-avatarLink">
+			<img alt="Mert Salih Kaplan" src="img/speaker1.jpg" class="twPc-avatarImg">
+		</a>
+
+		<div class="twPc-divUser">
+			<div class="twPc-divName">
+				<a href=""><span class="glyphicon glyphicon-user"></span>   SATIJN, H.M.C. (Bert)</a>
+				<br>
+				<a href=""><span class="glyphicon glyphicon-calendar"></span>   11-08-1949</a>
+				<br>
+				<a href=""><span class="glyphicon glyphicon-home"></span>   Buitenwatersloot 338,2614 GR Delft</a>
+				<br>
+				<a href=""> <span class="glyphicon glyphicon-earphone"></span>   +31 6 21504728</a>
+			</div>
+			
+		</div>
+
+		<div class="twPc-divStats">
+			<div class="row">
+                <div class="col-md-12 text-center">
+                    <div class="box">
+                        <div class="box-content">
+                            <h1 class="tag-title" style="text-align:left">Education</h1>
+                            <hr />
+							<ul style="text-align:left;">
+							<li>1966-1969 &nbsp&nbsp&nbsp&nbspBSc.Civil Engineering, College of Advanced Technology, Heerlen</li>
+                            <li>1969-1974 &nbsp&nbsp&nbsp&nbspMSc. Sanitary Engineering, Delft University of Technology</li>
+							<li>1977-1978 &nbsp&nbsp&nbsp&nbsp&nbspPost-graduate 1 year course, ITC Enschede,</li>
+							<li>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspCourse on the application of aerial photographs and satellite images for hydro geological and engineering geological studies in developing countries</li>
+							</ul>
+							<br />
+                        </div>
+                    </div>
+                </div>
+				</div>
+				
+				<div class="row">
+                <div class="col-md-12 text-center">
+                    <div class="box">
+                        <div class="box-content" style="text-align:left;">
+                            <h1 class="tag-title" style="text-align:left;font-family: 'Alegreya', serif;">Languages</h1>
+                            <hr />
+							<h4>Dutch, English, German, Kiswahili, French</h4>
+                            </ul>
+							<br />
+                        </div>
+                    </div>
+                </div>
+				</div>
+				
+				<div class="row">
+                <div class="col-md-12 text-center">
+                    <div class="box">
+                        <div class="box-content" style="text-align:left;">
+                            <h1 class="tag-title" style="text-align:left;font-family: 'Alegreya', serif;">Relevant Experiences</h1>
+                            <hr />
+							<h4 >November 1998-present</h4>
+							<h4>Independent Consultant on Water, Soil, WASH and IWRM</h4>
+							<h4>Main relevant assignments and projects:</h4>
+							<h5>(in reverse chronological order)</h5>
+							
+							<ul>
+							<br>
+							<li style="font-family: 'Hammersmith One', sans-serif;" >April 2011 – April 2016</li><br>
+							<p>Strategic Advisor (part time) for the Ministry of Foreign Affairs (MFA) with the first two years as principal assignment to support MFA and the embassy in Mali on developing the water program on IWRM. The support focused at the development of the Multi Annual Strategic Plan of the Dutch development cooperation with Mali in the area of water and food security. As advisor there was also the task to establish links between Malinese representatives of the national water sector, universities and knowledge institutes and the Dutch water sector.
+Since 2013 responsible for the crosscutting themes water and climate and water and food security, supporting the country specific strategic advisors and the embassies of the focus countries of MFA, including Mali.</p>
+							<br>
+							<li style="font-family: 'Hammersmith One', sans-serif;">January 2013- present</li><br>
+							<br>
+							<p>Trainer Young Expert Professionals Program (part time)</p>
+							
+							<br>
+							<li style="font-family: 'Hammersmith One', sans-serif;">April 2013 – December 2013</li>
+							<br>
+							<p>Chairman of the commission (part time) for the Mid Term Evaluation of Partners for Water Program 3.</p>
+							
+							<br>
+							<li style="font-family: 'Hammersmith One', sans-serif;">May 2011- November 2012</li>
+							<br>
+							<p>Program coordinator (part time) of the Coordinated Program on Water and Climate, knowledge brokering and networking with the members of the Netherlands Water Partnership, the Dutch water sector and the international development aid network, including the WWF network, the WB, GWP, IFAD, etc. One subject of CPWC was the development of the Framework for Sustainable Development to support the international IWRM work.</p>
+							
+							<br>
+							<li style="font-family: 'Hammersmith One', sans-serif;">March 2010- January 2015</li>
+							<br>
+							<p>Coordinator and associate (part time) of the Water Governance Centre (WGC), as coordinator responsible for the preparations of the formation of the Foundation WGC, an international knowledge program on water governance. After July 2011 as senior advisor / associate for 1.5 days per week active in the booster team with an emphasis on international projects, among others as with Ministry of Foreign Affairs.</p>
+							
+							<br>
+							<li style="font-family: 'Hammersmith One', sans-serif;">November 2003-July 2013</li>
+							<br>
+							<p>Director (full time) of the research program Living with Water, with a total budget of € 56 million focusing on the paradigm shift from “defense against the water” to “living with water” by developing, implementing and promoting a program with some 120 projects and 200 consortium partners. The program team had a capacity of totally 8 FTE with three project coordinators and six supporting staff. In addition to the duties as program director there were tasks as project supervising, including the supervision of projects in Gabon, Japan and China.</p>
+							
+							<br>
+							<li style="font-family: 'Hammersmith One', sans-serif;">November 1998 – November 2003</li>
+							<br>
+							<p>Program manager technology (part time) within the research Program SKB, a five years 20 million program on the development and demonstration of new cost effective technologies and concepts for the remediation of contaminated soil.</p>
+							
+							<br>
+							<li style="font-family: 'Hammersmith One', sans-serif;">1998-present: Other assignments and positions</li>
+							<br>
+							<p>As a consultant active in the following relevant projects and activities:</p>
+							<ul style="list-style-type:disc">
+							<li>Various missions abroad for monitoring and evaluation, fe. the evaluation of the project Girens in Mali commissioned by the Dutch Embassy in Bamako (2007), a project on integrated river basin management of the river Niger in collaboration with the Ministry of Hydraulique in Bamako;</li>
+							<li>Member of the Board (2006-2010) and Chairman of the project selection committee of the Dutch Waterboard Fund (2010-2014), an organization with a budget of around € 1 million / year focused on supporting water boards in their international work. Special attention was given to support the project for a climate-proof design of the mouth of the Senegal river delta in the city of St. Louis</li>
+							<li>Various contributions in international conferences and workshops, such as the introduction of the Dutch water sector in Casablanca in 2012 and in Georgia in 2013;</li>
+							<li>Verification and Validation of Gamba / Ivinga polluted sites remediation project in Gabon for Shell Gabon.</li>
+							</ul>
+							
+							<br>
+							<li style="font-family: 'Hammersmith One', sans-serif;">1996-1998 : Head Research group Environmental Technology, IWACO B.V.</li>
+							<br>
+							<p>Coordinating the research group (9 people), active in the field of environmental technology with emphasis on soil and waste and residues. The research group was responsible for initiating and conducting research of new technologies on corporate level. The research projects were implemented in collaboration with the IWACO certified laboratory, the specialists of other advisory groups and external partners.</p>
+							
+							<br>
+							<li style="font-family: 'Hammersmith One', sans-serif;">1987-1996 : Managing Director Regional Office Rotterdam, IWACO B.V.</li>
+							<br>
+							<p>The regional office had more than 110 employees subdivided into seven advisory groups. Projects were implemented in the areas of soil, hydrology and water management, ICT, water technology, environmental management and waste and sanitation.</p>
+							
+							<br>
+							<li style="font-family: 'Hammersmith One', sans-serif;">1983-1987 : Head of the Advisory Group on soil, IWACO B.V.</li>
+							<br>
+							<p>As a consultant involved in following projects among others:</p>
+							<ul style="list-style-type:disc">
+							<li>Soil Quality investigations and remediation on industrial sites and landfills in the Netherlands and abroad</li>
+							<li>Geohydrological studies, among others for Dunea and PWN Water supply companies), Tata Steel, Gist-Brocades (Delft and Porto), and Heineken (Sierra Leone) (industry)</li>
+							<li>Development of hydrogeological models, among others Triwaco</li>
+							<li>Courses and presentations in the field of soil remediation and environmental care</li>
+							<li>Development of the framework for soil care for the NAM.</li>
+							</ul>
+							
+							
+							<br>
+							<li style="font-family: 'Hammersmith One', sans-serif;">1981-1983 : Project engineer, IWACO B.V.</li>
+							<br>
+							<p>As project engineer responsible for:</p>
+							<ul style="list-style-type:disc">
+							<li>Design and testing of drinking water treatment plants and soil remediation</li>
+							<li>Hydrological studies catchment area and design earthen dam and water reservoir for drinking water supply in Balikpapan, Indonesia</li>
+							<li>Various projects in Ghana, Sierra Leone, Mozambique and Burkina Faso</li>
+							</ul>
+							
+							
+							<br>
+							<li style="font-family: 'Hammersmith One', sans-serif;">1979-1981 : Managing Director of Regional Office IWACO B.V. in Burkina Faso</li>
+							<br>
+							<p>As a senior advisor involved in:</p>
+							<ul style="list-style-type:disc">
+							<li>Geohydrological research, geophysics and remote sensing serving the exploitation of groundwater resources</li>
+							<li>Design and construction of rural drinking water systems, including shallow and deep wells</li>
+							<li>Management and training of local staff.</li>
+							</ul>
+							
+							<br>
+							<li style="font-family: 'Hammersmith One', sans-serif;">1978-1979 : Project engineer IWACO B.V.</li>
+							<br>
+							<p>As project engineer responsible for:</p>
+							<ul style="list-style-type:disc">
+							<li>Design of rural drinking water supply systems</li>
+							<li>Design of earth dams and spill ways</li>
+							<li>Back stopping foreign projects.</li>
+							</ul>
+							
+							<br>
+							<li style="font-family: 'Hammersmith One', sans-serif;">1975-1977 : Project engineer with the Dutch volunteers service in Tanzania,</li>
+							<br>
+							<p>As professional volunteer involved in:</p>
+							<ul style="list-style-type:disc">
+							<li>Geohydrological investigation and drilling</li>
+							<li>Design and construction of rural drinking water systems</li>
+							<li>Training of local personnel</li>
+							</ul>
+							
+							<br />
+                        </div>
+                    </div>
+                </div>
+				</div>
+				
+		</div>
+		<hr/>
+	</div>
+</div>
+<!-- code end -->
+</div>
+</div>
+ <!--=========== BEGIN FOOTER SECTION ================-->
+   <!--=========== BEGIN FOOTER SECTION ================-->
+    <footer id="footer">
+      <!-- Start footer top area -->
+      <div class="footer_top">
+        <div class="container">
+          <div class="row">
+            
+            <div class="col-ld-4  col-md-4 col-sm-4">
+              <div class="single_footer_widget">
+                <h3>Links</h3>
+                <ul class="footer_widget_nav">
+                  <li><a href="call_for_papers.html">Call For Papers</a></li>
+                  <li><a href="registrations.html">Registration</a></li>
+                  <li><a href="registrations.html">Payment Details</a></li>
+                  
+                </ul>
+              </div>
+            </div>
+            <div class="col-ld-4  col-md-4 col-sm-4">
+              <div class="single_footer_widget">
+                <h3>Others</h3>
+                <ul class="footer_widget_nav">
+                  <li><a href="theme.html">Themes of Conference</a></li>
+                  <li><a href="gallery.html">Gallery</a></li>
+                  
+                </ul>
+              </div>
+            </div>
+            <div class="col-ld-4  col-md-4 col-sm-4">
+              <div class="single_footer_widget">
+                <h3>Connect Us On</h3>
+                <ul class="footer_social">
+                  <li><a data-toggle="tooltip" data-placement="top" title="Facebook" class="soc_tooltip" href="https://www.facebook.com/Civil-DepartmentWCESangli-250199982068871/"><i class="fa fa-facebook"></i></a></li>
+                  <li><a data-toggle="tooltip" data-placement="top" title="Google+" class="soc_tooltip"  href="#"><i class="fa fa-google-plus"></i></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End footer top area -->
+
+      <!-- Start footer bottom area -->
+      <div class="footer_bottom">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-6">
+              <div class="footer_bootomLeft">
+                <p> Developed By - Shubham Anil Hupare</p>
+              </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6">
+              <div class="footer_bootomRight">
+                <p><a href="http://walchandsangli.ac.in" rel="nofollow">Walchand College of Engg. Sangli</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End footer bottom area -->
+    </footer>
+    <!--=========== END FOOTER SECTION ================--> 
+
+  
+  
+
+    <!-- Javascript Files
+    ================================================== -->
+
+    <!-- initialize jQuery Library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- Preloader js file -->
+    <script src="js/queryloader2.min.js" type="text/javascript"></script>
+    <!-- For smooth animatin  -->
+    <script src="js/wow.min.js"></script>  
+    <!-- Bootstrap js -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- slick slider -->
+    <script src="js/slick.min.js"></script>
+    <!-- superslides slider -->
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/jquery.animate-enhanced.min.js"></script>
+    <script src="js/jquery.superslides.min.js" type="text/javascript" charset="utf-8"></script>   
+    <!-- for circle counter -->
+    <script src='https://cdn.rawgit.com/pguso/jquery-plugin-circliful/master/js/jquery.circliful.min.js'></script>
+    <!-- Gallery slider -->
+    <script type="text/javascript" language="javascript" src="js/jquery.tosrus.min.all.js"></script>   
+   
+    <!-- Custom js-->
+    <script src="js/custom.js"></script>
+    <!--=============================================== 
+    Template Design By WpFreeware Team.
+    Author URI : http://www.wpfreeware.com/
+    ====================================================-->
+
+
+  </body>
+</html>

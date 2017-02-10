@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  
+    <!-- Basic Page Needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <title>Conference</title>
+
+    <!-- Mobile Specific Metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/icon" href="img/logo.png"/>
+
+    <!-- CSS
+    ================================================== -->       
+    <!-- Bootstrap css file-->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font awesome css file-->
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <!-- Superslide css file-->
+    <link rel="stylesheet" href="css/superslides.css">
+    <!-- Slick slider css file -->
+    <link href="css/slick.css" rel="stylesheet"> 
+    <!-- Circle counter cdn css file -->
+    <link rel='stylesheet prefetch' href='https://cdn.rawgit.com/pguso/jquery-plugin-circliful/master/css/jquery.circliful.css'>  
+    <!-- smooth animate css file -->
+    <link rel="stylesheet" href="css/animate.css"> 
+    <!-- preloader -->
+    <link rel="stylesheet" href="css/queryLoader.css" type="text/css" />
+    <!-- gallery slider css -->
+    <link type="text/css" media="all" rel="stylesheet" href="css/jquery.tosrus.all.css" />    
+    <!-- Default Theme css file -->
+    <link id="switcher" href="css/themes/default-theme.css" rel="stylesheet">
+    <!-- Main structure css file -->
+    <link href="style.css" rel="stylesheet">
+   
+    <!-- Google fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet' type='text/css'>   
+    <link href='http://fonts.googleapis.com/css?family=Varela' rel='stylesheet' type='text/css'>    
+
+   <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Francois+One" rel="stylesheet">
+
+
+
+
+
+
+ 
+  </head>
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
+</script>
+<style>
+
+#details { font-family: "Quicksand", sans-serif; font-size: 60px; }
+#home-box > h2 { font-family: "Quicksand", sans-serif; font-weight: 400; line-height: 1.1; color: #75b1ae; }
+.price { font-size: 25px; float: left; }
+.pricing_header { background: none repeat scroll 0% 0% rgb(44, 62, 80); border-radius: 5px 5px 0px 0px; transition: background 0.4s ease-out 0s; }
+.pricing_header h2 { text-align:center; line-height: 25px; padding: 15px 0px; margin: 0px; font-family: "Quicksand", sans-serif; font-weight: 400; color: #75b1ae; }
+.list-group-item:first-child { border-top-right-radius: 0px; border-top-left-radius: 0px; }
+.btn { float: right; font-family: "Quicksand", sans-serif; font-weight:500;}
+.off { text-decoration: line-through; color: rgb(86,86,86); }
+.space {height: 2px; background-color: #75b1ae;}
+
+
+
+
+    @import url(//fonts.googleapis.com/css?family=Lato:400,900);
+    @import url(//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css);
+    body {
+		padding: 60px 0px;
+	}
+	.animate {
+		-webkit-transition: all 0.3s ease-in-out;
+		-moz-transition: all 0.3s ease-in-out;
+		-o-transition: all 0.3s ease-in-out;
+		-ms-transition: all 0.3s ease-in-out;
+		transition: all 0.3s ease-in-out;
+	}
+	.info-card {
+		width: 100%;
+		border: 1px solid rgb(215, 215, 215);
+		position: relative;
+		font-family: 'Lato', sans-serif;
+		margin-bottom: 20px;
+		overflow: hidden;
+	}
+	.info-card > img {
+		width: 100px;
+		margin-bottom: 60px;
+	}
+	.info-card .info-card-details,
+	.info-card .info-card-details .info-card-header  {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		bottom: -100%;
+		left: 0;
+		padding: 0 15px;
+		background: rgb(255, 255, 255);
+		text-align: center;
+	}
+	.info-card .info-card-details::-webkit-scrollbar {
+		width: 8px;
+	}
+	.info-card .info-card-details::-webkit-scrollbar-button {
+		width: 8px;
+		height: 0px;
+	}
+	.info-card .info-card-details::-webkit-scrollbar-track {
+		background: transparent;
+	}
+	.info-card .info-card-details::-webkit-scrollbar-thumb {
+		background: rgb(160, 160, 160);
+	}
+	.info-card .info-card-details::-webkit-scrollbar-thumb:hover {
+		background: rgb(130, 130, 130);
+	}           
+
+	.info-card .info-card-details .info-card-header {
+		height: auto;		
+		bottom: 100%;
+		padding: 10px 5px;
+	}
+	.info-card:hover .info-card-details {
+		bottom: 0px;
+		overflow: auto;
+		padding-bottom: 25px;
+	}
+	.info-card:hover .info-card-details .info-card-header {
+		position: relative;
+		bottom: 0px;
+		padding-top: 45px;
+		padding-bottom: 25px;
+	}
+	.info-card .info-card-details .info-card-header h1,	
+	.info-card .info-card-details .info-card-header h3 {
+		color: rgb(62, 62, 62);
+		font-size: 22px;
+		font-weight: 900;
+		text-transform: uppercase;
+		margin: 0 !important;
+		padding: 0 !important;
+	}
+	.info-card .info-card-details .info-card-header h3 {
+		color: rgb(142, 182, 52);
+		font-size: 15px;
+		font-weight: 400;
+		margin-top: 5px;
+	}
+	.info-card .info-card-details .info-card-detail .social {
+		list-style: none;
+		padding: 0px;
+		margin-top: 25px;
+		text-align: center;
+	}
+	.info-card .info-card-details .info-card-detail .social a {
+		position: relative;
+		display: inline-block;
+		min-width: 40px;
+		padding: 10px 0px;
+		margin: 0px 5px;
+		overflow: hidden;
+		text-align: center;
+		background-color: rgb(215, 215, 215);
+		border-radius: 40px;
+	}
+
+	a.social-icon {
+		text-decoration: none !important;
+		box-shadow: 0px 0px 1px rgb(51, 51, 51);
+		box-shadow: 0px 0px 1px rgba(51, 51, 51, 0.7);
+	}
+	a.social-icon:hover {
+		color: rgb(255, 255, 255) !important;
+	}
+	a.facebook {
+		color: rgb(59, 90, 154) !important;
+	}
+	a.facebook:hover {		
+		background-color: rgb(59, 90, 154) !important;
+	}
+	a.twitter {
+		color: rgb(45, 168, 225) !important;
+	}
+	a.twitter:hover {
+		background-color: rgb(45, 168, 225) !important;
+	}
+	a.github {
+		color: rgb(51, 51, 51) !important;
+	}
+	a.github:hover {
+		background-color: rgb(51, 51, 51) !important;
+	}
+	a.google-plus {
+		color: rgb(244, 94, 75) !important;
+	}
+	a.google-plus:hover {
+		background-color: rgb(244, 94, 75) !important;
+	}
+	a.linkedin {
+		color: rgb(1, 116, 179) !important;
+	}
+	a.linkedin:hover {
+		background-color: rgb(1, 116, 179) !important;
+	}
+</style>
+  <body>    
+
+    <!-- SCROLL TOP BUTTON -->
+    <a class="scrollToTop" href="#"></a>
+    <!-- END SCROLL TOP BUTTON -->
+
+    <!--=========== BEGIN HEADER SECTION ================-->
+     <header id="header">
+      <!-- BEGIN MENU -->
+      <div class="menu_area">
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">  <div class="container">
+            <div class="navbar-header">
+              <!-- FOR MOBILE VIEW COLLAPSED BUTTON -->
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <!-- LOGO -->
+              <!-- TEXT BASED LOGO -->
+              <a class="navbar-brand" href="index.html">RACEE<span>2017</span></a>              
+              <!-- IMG BASED LOGO  -->
+               <!-- <a class="navbar-brand" href="index.html"><img src="img/logo.png" alt="logo"></a>  -->            
+                     
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+              <ul id="top-menu" class="nav navbar-nav navbar-right main-nav">
+                
+                    <li class="dropdown">
+                  <a href="index.html">Home</a>
+                  
+                </li> 
+                   
+				 <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Imp.information<span class="caret"></span></a>
+                  <ul class="dropdown-menu" role="menu">
+                    <li><a href="call_for_papers.html">Call for papers</a></li>
+                    <li><a href="theme.html">Themes of Conference</a></li>
+                    <li><a href="registrations.html">Registration and Payment</a></li>
+					
+                  </ul>
+                </li>   
+				 <li class="dropdown">
+                  <a href="persons.html">Committee</a>
+                  
+                </li> 
+				  	
+                <li><a href="gallery.html">Gallery</a></li>                
+                
+
+                <li><a href="contact.php">Contact</a></li>
+              </ul>           
+            </div><!--/.nav-collapse -->
+          </div>     
+        </nav>  
+      </div>
+      <!-- END MENU -->    
+    </header>
+	
+	    <br><br><br><br>
+		
+		                <!-- price & service -->
+						
+                <div class="container">
+    				
+                     
+                       <!-- Pack 1-->
+					   
+					    <div class="col-md-4" id="home-box">
+                            <div class="pricing_header">
+                                <h2>Advisory Committee</h2>
+                                <div class="space"></div>
+    						</div>
+                                <ul class="list-group">
+                                        <li class="list-group-item">Prof., Mohan Kumar M. S., IISc., Bangaluru</li>
+                                         
+                                        <li class="list-group-item">Prof. Virendra Sethi, IIT Bombay </li>
+                                        <li class="list-group-item">Prof. Anil Dikshit, IIT Bombay</li>
+                                        <li class="list-group-item">Prof. Appa Rao, IIT Chennai</li>
+                                        <li class="list-group-item">Prof. Sudhir Kumar Barai, IIT Kharagpur</li>
+										<li class="list-group-item">Prof. R. Nagarajan, IIT Bombay</li>
+                                        
+										
+										<li class="list-group-item"><center><span data-toggle="collapse" data-target="#committee2" class="glyphicon glyphicon-chevron-down"></span></center></li>
+								</ul>
+								<ul>
+										<div  id="committee2" class="collapse">
+										<li class="list-group-item">Prof. Jyothi Prasad, GB Pant College of Technology, Pantnagar</li>
+										<li class="list-group-item">Prof. H. J. Shivaprasad, GB Pant University, Pantnagar</li>
+										<li class="list-group-item">Prof. Debashish Chakravarty, IIT Kharagpur</li>
+										<li class="list-group-item">Prof. V. A. Mhaisalkar, VNIT, Nagpur</li>
+										<li class="list-group-item">Prof. Ravi Garg, IIT Roorkee</li>
+										<li class="list-group-item">Prof. B. Subbarao, EPRF, Sangli</li>
+										<li class="list-group-item">Prof. S. V. Ranade, Dnyandeep Infotech., Sangli</li>
+										<li class="list-group-item">Prof. J. M. Gadgil, Environmental Consultant, Sangli</li>
+										<li class="list-group-item">Prof. S. S. Santpur, Ex- HoD Department of Civil Engineering , Sangli</li>
+										<li class="list-group-item">Prof. S. S. Karandikar, Ex- HoD Department of Civil Engineering, Sangli</li>
+                                        </div>
+										
+									</ul>
+                              
+                            </div>
+					   
+					   
+                        <div class="col-md-4" id="home-box">
+                            <div class="pricing_header">
+                                <h2>International Advisory Committee</h2>
+                                <div class="space"></div>
+    						</div>
+                                <ul class="list-group">
+                                        <li class="list-group-item">Mr Thijs Edelkoort, At Osborne, J.F. Kennedylaan 100, 3741 EH Baarn </li>
+                                         
+                                        <li class="list-group-item">Mr. Umesh Dhargalkar, Managing Director, Dhargalkar Technoesis (I) Pvt. Ltd. Mumbai </li>
+                                        <li class="list-group-item">Mr Satijn H. M. C., Buitenwatersloot 338, 2614 GR Delft</li>
+                                        
+                                        
+										<li class="list-group-item"><center><span data-toggle="collapse" data-target="#committee3" class="glyphicon glyphicon-chevron-down"></span></center></li>
+								</ul>
+								<ul>
+								<div  id="committee3" class="collapse">
+										<li class="list-group-item">Mr. Valentin Post, Co-Founder and Chair of the Board of FINISH in Kenya</li>
+										<li class="list-group-item">Dr. Kulwant Singh CEO, 3R WASTE Foundation (India)</li>
+										<li class="list-group-item">Dr. Shishir Sable, Laurus Melselaan 1, 2493 BW, Den Haag, The Netherlands</li>
+									</div>
+								   </ul>
+                                
+                               
+                            </div>
+                        <!-- Pack 2-->
+                       
+                         
+                        
+                        
+                        <!-- Pack 3-->
+                        <div class="col-md-4" id="home-box">
+                            <div class="pricing_header">
+                                <h2>Organizing Committee</h2>
+                                <div class="space"></div>
+							</div>
+                                <ul class="list-group">
+                                    <li class="list-group-item">Prof. K. S. Wagh</li>
+									<li class="list-group-item">Shri. S. S. Bapat</li>
+									<li class="list-group-item">Shri. C. H. Wagh</li>
+									<li class="list-group-item">Shri. A. K. Kokane</li>
+									<li class="list-group-item">Shri. A. K. Mali</li>
+									<li class="list-group-item">Shri. M. S. Ali</li>
+									
+									<li class="list-group-item"><center><span data-toggle="collapse" data-target="#committee1" class="glyphicon glyphicon-chevron-down"></span></center></li>
+								</ul>
+								<ul>
+								<div  id="committee1" class="collapse">
+									<li class="list-group-item">Ms. S. S. Mohite</li>
+									<li class="list-group-item">Mrs. M. M. Tilave</li>
+									<li class="list-group-item">Shri. A. C. Shirle</li>
+									<li class="list-group-item">Shri. S. D. Kamble </li>
+                                 </div>
+								 </ul>  
+																	 
+                               
+                            </div>
+                        
+                        
+                       
+                    </div>  
+						
+		<!--------------------------->
+		<br>
+		<div class="container">
+		<div class="row">
+			<div class="[ col-sm-12 col-md-12 ]">
+				<div class="single_stsTestimonial wow fadeInUp">
+				    <h4><b>Chief Patron</b></h4><hr>
+					<center><img  class="stsTesti_img" src="img/ajit.jpg" /></center>
+					<div class="stsTestimonial_content">
+                      <h3>Shri. Ajit Gulabchand</h3>                      
+                      <span>Chairman , Administrative Council</span>
+                      <p>Walchand College Of Engineering , Sangli.</p>
+                    </div>
+				</div>
+			</div>
+			</div>
+			<br>
+			<div class="row">
+			<center><h4><b>Patrons</b></h4></center>
+			<hr><br>
+    		<div class="[ col-sm-4 col-md-4 ]">
+				<div class="single_stsTestimonial wow fadeInUp">
+					<center><img  class="stsTesti_img" src="img/director.jpg" /></center>
+					<div class="stsTestimonial_content">
+                      <h3>Dr.G.V.Parishwad</h3>                      
+                      <span>Director</span>
+                      <p>Walchand College Of Engineering , Sangli.</p>
+                    </div>
+				</div>
+			</div>
+			<div class="[ col-sm-4 col-md-4 ]">
+				<div class="single_stsTestimonial wow fadeInUp">
+					<center><img  class="stsTesti_img" src="img/PJK.jpg" /></center>
+					<div class="stsTestimonial_content">
+                      <h3>Dr.P.J.Kulkarni</h3>                      
+                      <span>Deputy Director</span>
+                      <p>Walchand College Of Engineering , Sangli.</p>
+                    </div>
+				</div>
+			</div>
+			<div class="[ col-sm-4 col-md-4 ]">
+				<div class="single_stsTestimonial wow fadeInUp">
+					<center><img  class="stsTesti_img" src="img/ravi.jpg" /></center>
+					<div class="stsTestimonial_content">
+                      <h3>Shri.Ravindra Purohit</h3>                      
+                      <span>Member , Administrative Council</span>
+                      <p>Walchand College Of Engineering , Sangli.</p>
+                    </div>
+				</div>
+			</div>
+			
+			</div>
+			<br><br>
+			<div class="row">
+			<div class="[ col-sm-6 col-md-6 ]">
+				<div class="single_stsTestimonial wow fadeInUp">
+					<center><img  class="stsTesti_img" src="img/dbk.png" /></center>
+					<div class="stsTestimonial_content">
+                      <h3>Dr.D.B.Kulkarni</h3>                      
+                      <span>Registrar</span>
+                      <p>Walchand College Of Engineering , Sangli.</p>
+                    </div>
+				</div>
+			</div>
+			<div class="[ col-sm-6 col-md-6 ]">
+				<div class="single_stsTestimonial wow fadeInUp">
+					<center><img  class="stsTesti_img" src="img/more_d_S.jpg" /></center>
+					<div class="stsTestimonial_content">
+                      <h3>Dr.D.S.More</h3>                      
+                      <span>TEQIP Co-Ordinator</span>
+                      <p>Walchand College Of Engineering , Sangli.</p>
+                    </div>
+				</div>
+			</div>
+			
+			
+		</div>
+	</div>
+		<br><br>
+		<center><h3>For further Information contact us</h3></center>
+		<hr>
+		<br>
+		<div class="container">
+		<div class="row">
+			<div class="[ col-sm-3 col-md-3 ]">
+				<div class="single_stsTestimonial wow fadeInUp">
+					<center><img  class="stsTesti_img" src="img/c1.jpg" /></center>
+					<div class="stsTestimonial_content">
+                      <h3>Prof. P. G. Sonavane</h3>                      
+                      <span>Convener</span><br>
+					  <span>Professor</span><br>
+					  <span>Dept. of Civil Engineering</span>
+                      <p>Walchand College Of Engineering , Sangli.</p>
+					  <p><span class="glyphicon glyphicon-earphone"></span> +91 9822534868</p>
+                    </div>
+				</div>
+			</div>
+    		<div class="[ col-sm-3 col-md-3 ]">
+				<div class="single_stsTestimonial wow fadeInUp">
+					<center><img  class="stsTesti_img" src="img/c2.jpg" /></center>
+					<div class="stsTestimonial_content">
+                      <h3>Dr. G. R. Munavalli</h3>   
+						<span>Co-convener</span><br>
+                      <span>Associate Professor</span><br>
+					  <span>Dept. of Civil Engineering</span>
+
+                      <p>Walchand College Of Engineering , Sangli.</p>
+					  <p><span class="glyphicon glyphicon-earphone"></span> +91 9421128158</p>
+                    </div>
+				</div>
+			</div>
+			<div class="[ col-sm-3 col-md-3 ]">
+				<div class="single_stsTestimonial wow fadeInUp">
+					<center><img  class="stsTesti_img" src="img/c3.jpg" /></center>
+					<div class="stsTestimonial_content">
+                      <h3>Dr. K. S. Gumaste</h3>                      
+                      <span>Co-convener</span><br>
+					  <span>Associate Professor</span><br>
+					  <span>Dept. of Civil Engineering</span>
+                      <p>Walchand College Of Engineering , Sangli.</p>
+					  <p><span class="glyphicon glyphicon-earphone"></span> +91 9420764490 </p>
+                    </div>
+				</div>
+			</div>
+			<div class="[ col-sm-3 col-md-3 ]">
+				<div class="single_stsTestimonial wow fadeInUp">
+					<center><img  class="stsTesti_img" src="img/c4.jpg" /></center>
+					<div class="stsTestimonial_content">
+                      <h3>Dr. V. D. Salkar</h3>                      
+                      <span>Organizing Secretary</span><br>
+					  <span>Associate Professor</span><br>
+					  <span>Dept. of Civil Engineering</span>
+                      <p>Walchand College Of Engineering , Sangli.</p>
+					  <p><span class="glyphicon glyphicon-earphone"></span> +91 9922803990 </p>
+                     
+                    </div>
+				</div>
+			</div>
+			
+			
+		</div>
+	</div>
+		
+		<br><br>
+		
+		
+		
+		<!------------------------------>
+		 <!--=========== BEGIN FOOTER SECTION ================-->
+  <!--=========== BEGIN FOOTER SECTION ================-->
+    <footer id="footer">
+      <!-- Start footer top area -->
+      <div class="footer_top">
+        <div class="container">
+          <div class="row">
+            
+            <div class="col-ld-4  col-md-4 col-sm-4">
+              <div class="single_footer_widget">
+                <h3>Links</h3>
+                <ul class="footer_widget_nav">
+                  <li><a href="call_for_papers.html">Call For Papers</a></li>
+                  <li><a href="registrations.html">Registration</a></li>
+                  <li><a href="registrations.html">Payment Details</a></li>
+                  
+                </ul>
+              </div>
+            </div>
+            <div class="col-ld-4  col-md-4 col-sm-4">
+              <div class="single_footer_widget">
+                <h3>Others</h3>
+                <ul class="footer_widget_nav">
+                  <li><a href="theme.html">Themes of Conference</a></li>
+                  <li><a href="gallery.html">Gallery</a></li>
+                  
+                </ul>
+              </div>
+            </div>
+            <div class="col-ld-4  col-md-4 col-sm-4">
+              <div class="single_footer_widget">
+                <h3>Connect Us On</h3>
+                <ul class="footer_social">
+                  <li><a data-toggle="tooltip" data-placement="top" title="Facebook" class="soc_tooltip" href="https://www.facebook.com/Civil-DepartmentWCESangli-250199982068871/"><i class="fa fa-facebook"></i></a></li>
+                  <li><a data-toggle="tooltip" data-placement="top" title="Google+" class="soc_tooltip"  href="#"><i class="fa fa-google-plus"></i></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End footer top area -->
+
+      <!-- Start footer bottom area -->
+      <div class="footer_bottom">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-6">
+              <div class="footer_bootomLeft">
+                <p> Developed By - Shubham Anil Hupare</p>
+
+              </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6">
+              <div class="footer_bootomRight">
+                <p><a href="http://walchandsangli.ac.in" rel="nofollow">Walchand College of Engg. Sangli</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End footer bottom area -->
+    </footer>
+    <!--=========== END FOOTER SECTION ================--> 
+
+  
+
+    <!-- Javascript Files
+    ================================================== -->
+
+    <!-- initialize jQuery Library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- Preloader js file -->
+    <script src="js/queryloader2.min.js" type="text/javascript"></script>
+    <!-- For smooth animatin  -->
+    <script src="js/wow.min.js"></script>  
+    <!-- Bootstrap js -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- slick slider -->
+    <script src="js/slick.min.js"></script>
+    <!-- superslides slider -->
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/jquery.animate-enhanced.min.js"></script>
+    <script src="js/jquery.superslides.min.js" type="text/javascript" charset="utf-8"></script>   
+    <!-- for circle counter -->
+    <script src='https://cdn.rawgit.com/pguso/jquery-plugin-circliful/master/js/jquery.circliful.min.js'></script>
+    <!-- Gallery slider -->
+    <script type="text/javascript" language="javascript" src="js/jquery.tosrus.min.all.js"></script>   
+   
+    <!-- Custom js-->
+    <script src="js/custom.js"></script>
+    <!--=============================================== 
+    Template Design By WpFreeware Team.
+    Author URI : http://www.wpfreeware.com/
+    ====================================================-->
+
+
+  </body>
+</html>

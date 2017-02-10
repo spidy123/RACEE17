@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  
+    <!-- Basic Page Needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <title>Conference</title>
+
+    <!-- Mobile Specific Metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/icon" href="img/logo.png"/>
+
+    <!-- CSS
+    ================================================== -->       
+    <!-- Bootstrap css file-->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font awesome css file-->
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <!-- Superslide css file-->
+    <link rel="stylesheet" href="css/superslides.css">
+    <!-- Slick slider css file -->
+    <link href="css/slick.css" rel="stylesheet"> 
+    <!-- Circle counter cdn css file -->
+    <link rel='stylesheet prefetch' href='https://cdn.rawgit.com/pguso/jquery-plugin-circliful/master/css/jquery.circliful.css'>  
+    <!-- smooth animate css file -->
+    <link rel="stylesheet" href="css/animate.css"> 
+    <!-- preloader -->
+    <link rel="stylesheet" href="css/queryLoader.css" type="text/css" />
+    <!-- gallery slider css -->
+    <link type="text/css" media="all" rel="stylesheet" href="css/jquery.tosrus.all.css" />    
+    <!-- Default Theme css file -->
+    <link id="switcher" href="css/themes/default-theme.css" rel="stylesheet">
+    <!-- Main structure css file -->
+    <link href="style.css" rel="stylesheet">
+   
+    <!-- Google fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet' type='text/css'>   
+    <link href='http://fonts.googleapis.com/css?family=Varela' rel='stylesheet' type='text/css'>    
+
+   <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Francois+One" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Alegreya" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=IM+Fell+English+SC" rel="stylesheet">
+
+ <link href="https://fonts.googleapis.com/css?family=Hammersmith+One" rel="stylesheet">
+
+  </head>
+  <style>
+   </style>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
+</script>
+<style>
+#aboutUs{
+min-height:100%;
+}
+.twPc-div {
+    background: #fff none repeat scroll 0 0;
+    border: 1px solid #e1e8ed;
+    border-radius: 6px;
+    height: 100%;
+    max-width: 100$; // orginal twitter width: 290px;
+}
+.twPc-bg {
+    background-image: url("https://pbs.twimg.com/profile_banners/50988711/1384539792/600x200");
+    background-position: 0 50%;
+    background-size: 100% auto;
+    border-bottom: 1px solid #e1e8ed;
+    border-radius: 4px 4px 0 0;
+    height: 120px;
+    width: 100%;
+}
+.twPc-block {
+    display: block !important;
+}
+.twPc-button {
+    margin: -35px -10px 0;
+    text-align: right;
+    width: 100%;
+}
+.twPc-avatarLink {
+    background-color: #fff;
+    border-radius: 6px;
+    display: inline-block !important;
+    float: left;
+    margin: -30px 5px 0 8px;
+    max-width: 100%;
+    padding: 1px;
+    vertical-align: bottom;
+}
+.twPc-avatarImg {
+    border: 2px solid #fff;
+    border-radius: 7px;
+    box-sizing: border-box;
+    color: #fff;
+    height:200px;
+    width: 200px;
+}
+.twPc-divUser {
+    margin: 20px 0 0;
+}
+.twPc-divName {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 21px;
+	
+}
+.twPc-divName a {
+    color: inherit !important;
+	margin-left:10px;
+	}
+.twPc-divStats {
+    margin-left: 11px;
+    padding: 10px 0;
+}
+.twPc-Arrange {
+    box-sizing: border-box;
+    display: table;
+    margin: 0;
+    min-width: 100%;
+    padding: 0;
+    table-layout: auto;
+}
+ul.twPc-Arrange {
+    list-style: outside none none;
+    margin: 0;
+    padding: 0;
+}
+.twPc-ArrangeSizeFit {
+    display: table-cell;
+    padding: 0;
+    vertical-align: top;
+}
+.twPc-ArrangeSizeFit a:hover {
+    text-decoration: none;
+}
+.twPc-StatValue {
+    display: block;
+    font-size: 18px;
+    font-weight: 500;
+    transition: color 0.15s ease-in-out 0s;
+}
+.twPc-StatLabel {
+    color: #8899a6;
+    font-size: 10px;
+    letter-spacing: 0.02em;
+    overflow: hidden;
+    text-transform: uppercase;
+    transition: color 0.15s ease-in-out 0s;
+}
+.box-content li{
+font-size:20px;
+font-family: "Times New Roman", Times, serif;
+}
+.box-content ul{
+	padding-left:20px;
+}
+.box-content p{
+	font-size:15px;
+	
+}
+</style>
+  <body>    
+
+    <!-- SCROLL TOP BUTTON -->
+    <a class="scrollToTop" href="#"></a>
+    <!-- END SCROLL TOP BUTTON -->
+
+    <!--=========== BEGIN HEADER SECTION ================-->
+     <header id="header">
+      <!-- BEGIN MENU -->
+      <div class="menu_area">
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">  <div class="container">
+            <div class="navbar-header">
+              <!-- FOR MOBILE VIEW COLLAPSED BUTTON -->
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <!-- LOGO -->
+              <!-- TEXT BASED LOGO -->
+              <a class="navbar-brand" href="index.html">RACEE<span>2017</span></a>              
+              <!-- IMG BASED LOGO  -->
+               <!-- <a class="navbar-brand" href="index.html"><img src="img/logo.png" alt="logo"></a>  -->            
+                     
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+              <ul id="top-menu" class="nav navbar-nav navbar-right main-nav">
+                  <li class="dropdown">
+                  <a href="index.html">Home</a>
+                  
+                </li> 
+				 <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Imp.information<span class="caret"></span></a>
+                  <ul class="dropdown-menu" role="menu">
+                    <li><a href="call_for_papers.html">Call for papers</a></li>
+                    <li><a href="theme.html">Themes of Conference</a></li>
+                    <li><a href="registrations.html">Registration and Payment</a></li>
+					
+                  </ul>
+                </li>   
+				 <li class="dropdown">
+                  <a href="persons.html">Committee</a>
+                  
+                </li> 
+				  	
+                <li><a href="gallery.html">Gallery</a></li>                
+                
+
+                <li><a href="contact.php">Contact</a></li>
+              </ul>           
+            </div><!--/.nav-collapse -->
+          </div>     
+        </nav>  
+      </div>
+      <!-- END MENU -->    
+    </header>
+	
+	<br><br><br><br><br>
+	
+<div class="container">
+<div class="row">
+
+<!-- code start -->
+<div class="twPc-div">
+    <a class="twPc-bg twPc-block"></a>
+
+	<div>
+		
+
+		<a title="Mert Salih Kaplan" href="https://twitter.com/mertskaplan" class="twPc-avatarLink">
+			<img alt="Mert Salih Kaplan" src="img/mohan.jpg" class="twPc-avatarImg">
+		</a>
+
+		<div class="twPc-divUser">
+			<div class="twPc-divName">
+				<a href=""><span class="glyphicon glyphicon-user"></span>   Prof.M.S.Mohan Kumar</a>
+				<br>
+				<a href=""><span class="glyphicon glyphicon-home"></span>   Department of Civil Engineering
+Indian Institute of Science, Bangalore 560012, INDIA </a>
+				<br>
+				<a href=""> <span class="glyphicon glyphicon-earphone"></span>   080 22932814, 080 23600910</a>
+				<br>
+				<a href=""> <span class="glyphicon glyphicon-envelope"></span>   msmk@civil.iisc.ernet.in</a>
+
+			</div>
+			
+		</div>
+
+		<div class="twPc-divStats">
+			<div class="row">
+                <div class="col-md-12 text-center">
+                    <div class="box">
+                        <div class="box-content" style="text-align:left;">
+     
+		<br>
+		 <h1 class="tag-title" style="text-align:left;font-family: 'Alegreya', serif;">Education</h1>
+<hr/>
+
+	    
+		<ul>
+		<li><b>Indian Institute of Science, Bangalore, India</b></li>
+		<li><small>PhD in Civil Engineering (Water Resources Engg.) • 1984</small></li>
+		<br>
+		<li><b>Indian Institute of Science, Bangalore, India</b></li>
+		<li><small>MSc (Engg) in Civil Engineering • 1978</small></li>
+		<br>
+		<li><b>Bangalore University, Bangalore, India</b></li>
+		<li><small>MSc (Mathematics) • 1975</small></li>
+
+		</ul>
+	
+	
+	<br>
+		 <h1 class="tag-title" style="text-align:left;font-family: 'Alegreya', serif;">Professional Career</h1>
+<hr/>
+
+	    
+		<ul>
+		<li><b>Professor</b></li>
+		<li><small>Water Resources and Environmental Engineering • Present</small></li>
+		<li><small>Professor, Department of Civil Engineering, Indian Institute of Science, Bangalore, India</small></li>
+		<li><small>Chairman, Indo-French Cell for Water Sciences</small></li>
+		<li><small>Associate faculty, CiSTUP</small></li>
+		<li><small>Associate faculty, Robert Bosch Centre for Cyber Physical Systems, Indian Institute of Science</small></li>
+		<li><small>Associate faculty, ICWaR</small></li>
+		<br>
+		<li><b>Lecturer, Assistant Professor, Associate Professor, Professor</b></li>
+		<li><small>Water Resources and Environmental Engineering • Past</small></li>
+		<li><small>Worked as Lecturer, Assistant Professor, Associate Professor and Professor in the Department of Civil Engineering, Indian Institute of Science, Bangalore</small></li>
+		<li><small>Hon. Secretary, Karnataka State Council for Science and Technology</small></li>
+
+		</ul>
+		
+		<br>
+		 <h1 class="tag-title" style="text-align:left;font-family: 'Alegreya', serif;">Research Experiences</h1>
+<hr/>
+
+	    
+		<ul>
+		<li>Ground water flow modeling</li>
+		<li>Flow through vadose zone</li>
+		<li>Contaminant transport modelling in porous media</li>
+		<li>Flow in canal networks</li>
+		<li>Multiphase flow modeling</li>
+		<li>Water quantity / quality modeling in distribution networks</li>
+
+		</ul>
+		
+		<br>
+		 <h1 class="tag-title" style="text-align:left;font-family: 'Alegreya', serif;">Awards / Honours / Recongnition</h1>
+<hr/>
+
+	    
+		<ul>
+		<li>Indian National Science Academy and Japanese Society for Promotion of Science Fellowship</li>
+		<li>Alexander Von Humboldt Fellowship</li>
+		<li>Visiting Professor, Institute of Low land Technology, Saga University, Japan</li>
+		<li>Visiting Professor, Department of Earth Sciences, Utrecht University, The Netherlands</li>
+		<li>Fellow Indian Water Works Association</li>
+		<li>Fellow, The Geological Society of India</li>
+		<li>Member International Association for Hydrogeologists</li>
+		<li>Member Indian Society for Hydraulics</li>
+		<li>Chairman, Technical Committee, BWSSB</li>
+		<li>Member, Board of Directors, KUWSDB</li>
+		<li>Member Technical Committee, KUWSDB</li>
+		<li>Member Technical Committee, Department of Rural Water Supply</li>
+		<li>Member Technical Committee, Irrigation Department, KNNL</li>
+		<li>Member Technical Committee, BDA</li>
+		<li>Research Council member NEERI</li>
+		<li>Research Council member CWRDM</li>
+		<li>Chairman RPP, SELTAR, IRD France</li>
+		<li>RC member EMPRI</li>
+		<li>Member WTI, DST</li>
+		<li>Member Monitoring committee, INDO-EU projects of DST</li>
+		<li>Council Member International Association of Lowland Technology</li>
+		<li>Member International Water Association</li>
+		<li>IBM faculty award.</li>
+		<li>Amulya & Vimala Reddy Lecture Award conferred by Indian Institute of Science in the field of sustainable technology.</li>
+		<li>Prof N C Modak Memorial Lecture award by Institution of Engineers (India)</li>
+		</ul>
+		
+		<br>
+		 <h1 class="tag-title" style="text-align:left;font-family: 'Alegreya', serif;">Current Research Projects</h1>
+<hr/>
+	<ul style="list-style-type:disc">
+	<li>Sensor Network Based Cyber Physical Infrastructure for Continuous Monitoring of Water Distribution Networks Cost: - 1.93 crores</li>
+	<li>Smart Campus Water Management: Closing the IoT Loop from Network to Knowledge Cost: Rs. 108.476 Lakhs</li>
+	<li>Adaptation of irrigated agriculture to climate change. Sponsored by Indo-French CEFIPRA/IFCPAR. Duration: 3 years (2013-2016). Rs. 43,64,868 (Co-PI)</li>
+	<li>Estimation of soil hydraulic properties in a catchment using agro-hydrological models and microwave remote sensing. Sponsored by ISRO-STC. Duration: 2 years (2013-2015). Rs. 5,94,500 (Co-PI)</li>
+	<li>ITRA grant Integrated Urban flood management in India (Sept 2013 - Sept 2016) Rs. 292.81 lakhs (IISc Budget Rs. 148.97 lakhs) - (Co-PI)</li>
+	<li>IBM shared University research award USD 40,000 in the area of smart water grids. (PI)</li>
+	<li>Retrieval of root zone soil moisture from near-surface measurements. Sponsored by ISRO-STC. Duration: 2 years (2008-2010). (Co-PI)</li>
+	<li>Characterization of groundwater flow regime in fractured aquifer system. Sponsored by AICTE. Duration: 3 years (2006-2009). Rs. 25,00,000 (Co-PI)</li>
+	<li>An integrated study of hydrology and mineralogy for assessment of water quantity and quality in the sub-catchment/ watershed, Sponsored by IRD, France. Duration: 13 years (2001-2018). Rs. 1,07,98,092 (Co-PI)</li>
+	<li>R&D activities and Capacity building in the area of Sump Pump Model studies involving both Physical Modelling as well as CFD model development Rs. 52 lakhs 18 months (PI)</li>
+	<li>Intelligent Water Supply Network Monitoring and Control for Equitable Distribution of Water within a Mega city, R&D project applied under IMPRINT, MHRD, Rs 4 Crores, (Under consideration).</li>
+	
+	</ul>
+		
+		
+		<br>
+		 
+	
+		
+                    </div>
+                </div>
+				</div>
+				
+				
+							<br />
+                        </div>
+						<hr />
+                    </div>
+                </div>
+				</div>
+				
+		</div>
+	</div>
+</div>
+<!-- code end -->
+</div>
+</div>
+ <!--=========== BEGIN FOOTER SECTION ================-->
+    <!--=========== BEGIN FOOTER SECTION ================-->
+    <footer id="footer">
+      <!-- Start footer top area -->
+      <div class="footer_top">
+        <div class="container">
+          <div class="row">
+            
+            <div class="col-ld-4  col-md-4 col-sm-4">
+              <div class="single_footer_widget">
+                <h3>Links</h3>
+                <ul class="footer_widget_nav">
+                  <li><a href="call_for_papers.html">Call For Papers</a></li>
+                  <li><a href="registrations.html">Registration</a></li>
+                  <li><a href="registrations.html">Payment Details</a></li>
+                  
+                </ul>
+              </div>
+            </div>
+            <div class="col-ld-4  col-md-4 col-sm-4">
+              <div class="single_footer_widget">
+                <h3>Others</h3>
+                <ul class="footer_widget_nav">
+                  <li><a href="theme.html">Themes of Conference</a></li>
+                  <li><a href="gallery.html">Gallery</a></li>
+                  
+                </ul>
+              </div>
+            </div>
+            <div class="col-ld-4  col-md-4 col-sm-4">
+              <div class="single_footer_widget">
+                <h3>Connect Us On</h3>
+               <ul class="footer_social">
+                  <li><a data-toggle="tooltip" data-placement="top" title="Facebook" class="soc_tooltip" href="https://www.facebook.com/Civil-DepartmentWCESangli-250199982068871/"><i class="fa fa-facebook"></i></a></li>
+                  <li><a data-toggle="tooltip" data-placement="top" title="Google+" class="soc_tooltip"  href="#"><i class="fa fa-google-plus"></i></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End footer top area -->
+
+      <!-- Start footer bottom area -->
+      <div class="footer_bottom">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-6">
+              <div class="footer_bootomLeft">
+                <p> Developed By - Shubham Anil Hupare</p>
+
+              </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6">
+              <div class="footer_bootomRight">
+                <p><a href="http://walchandsangli.ac.in" rel="nofollow">Walchand College of Engg. Sangli</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End footer bottom area -->
+    </footer>
+    <!--=========== END FOOTER SECTION ================--> 
+
+  
+  
+
+    <!-- Javascript Files
+    ================================================== -->
+
+    <!-- initialize jQuery Library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- Preloader js file -->
+    <script src="js/queryloader2.min.js" type="text/javascript"></script>
+    <!-- For smooth animatin  -->
+    <script src="js/wow.min.js"></script>  
+    <!-- Bootstrap js -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- slick slider -->
+    <script src="js/slick.min.js"></script>
+    <!-- superslides slider -->
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/jquery.animate-enhanced.min.js"></script>
+    <script src="js/jquery.superslides.min.js" type="text/javascript" charset="utf-8"></script>   
+    <!-- for circle counter -->
+    <script src='https://cdn.rawgit.com/pguso/jquery-plugin-circliful/master/js/jquery.circliful.min.js'></script>
+    <!-- Gallery slider -->
+    <script type="text/javascript" language="javascript" src="js/jquery.tosrus.min.all.js"></script>   
+   
+    <!-- Custom js-->
+    <script src="js/custom.js"></script>
+    <!--=============================================== 
+    Template Design By WpFreeware Team.
+    Author URI : http://www.wpfreeware.com/
+    ====================================================-->
+
+
+  </body>
+</html>

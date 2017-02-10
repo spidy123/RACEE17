@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  
+    <!-- Basic Page Needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <title>Conference</title>
+
+    <!-- Mobile Specific Metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/icon" href="img/logo.png"/>
+
+    <!-- CSS
+    ================================================== -->       
+    <!-- Bootstrap css file-->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font awesome css file-->
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <!-- Superslide css file-->
+    <link rel="stylesheet" href="css/superslides.css">
+    <!-- Slick slider css file -->
+    <link href="css/slick.css" rel="stylesheet"> 
+    <!-- Circle counter cdn css file -->
+    <link rel='stylesheet prefetch' href='https://cdn.rawgit.com/pguso/jquery-plugin-circliful/master/css/jquery.circliful.css'>  
+    <!-- smooth animate css file -->
+    <link rel="stylesheet" href="css/animate.css"> 
+    <!-- preloader -->
+    <link rel="stylesheet" href="css/queryLoader.css" type="text/css" />
+    <!-- gallery slider css -->
+    <link type="text/css" media="all" rel="stylesheet" href="css/jquery.tosrus.all.css" />    
+    <!-- Default Theme css file -->
+    <link id="switcher" href="css/themes/default-theme.css" rel="stylesheet">
+    <!-- Main structure css file -->
+    <link href="style.css" rel="stylesheet">
+   
+    <!-- Google fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet' type='text/css'>   
+    <link href='http://fonts.googleapis.com/css?family=Varela' rel='stylesheet' type='text/css'>    
+<link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
+
+   
+ 
+  </head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
+</script>
+<style>
+#aboutUs{
+min-height:100%;
+}
+.msg {
+    background: #fefefe;
+    color: #666666;
+    font-weight: bold;
+    font-size: medium;
+    padding: 12px;
+    padding-left: 16px;
+    border-top: solid 3px #CCCCCC;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    -webkit-box-shadow: 0 10px 10px -5px rgba(0,0,0,.08);
+       -moz-box-shadow: 0 10px 10px -5px rgba(0,0,0,.08);
+            box-shadow: 0 10px 10px -5px rgba(0,0,0,.08);
+}
+.msg-clear {
+    border-color: #fefefe;
+    -webkit-box-shadow: 0 7px 10px -5px rgba(0,0,0,.15);
+       -moz-box-shadow: 0 7px 10px -5px rgba(0,0,0,.15);
+            box-shadow: 0 7px 10px -5px rgba(0,0,0,.15);
+}
+.msg-info {
+    border-color: #b8dbf2;
+}
+.msg-success {
+    border-color: #cef2b8;
+}
+.msg-warning {
+    border-color: rgba(255,165,0,.5);
+}
+.msg-danger {
+    border-color: #ec8282;
+}
+.msg-primary {
+    border-color: #9ca6f1;
+}
+.msg-magick {
+    border-color: #e0b8f2;
+}
+.msg-info-text {
+    color: #39b3d7;
+}
+.msg-success-text {
+    color: #80d651;
+}
+.msg-warning-text {
+    color: #db9e34;
+}
+.msg-danger-text {
+    color: #c9302c;
+}
+.msg-primary-text {
+    color: rgba(47,106,215,.9);
+}
+.msg-magick-text {
+    color: #bb39d7;
+}
+
+
+
+.box {
+  background:#fff;
+  transition:all 0.2s ease;
+  border:2px dashed #dadada;
+  margin-top: 10px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  background-clip: padding-box;
+  padding:0 20px 20px 20px;
+  min-height:340px;
+}
+
+.box:hover {
+  border:2px solid #525C7A;
+}
+
+.box span.box-title {
+    color: #fff;
+    font-size: 24px;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+.box .box-content {
+  padding: 16px;
+  border-radius: 0 0 2px 2px;
+  background-clip: padding-box;
+  box-sizing: border-box;
+}
+.box .box-content p {
+  color:#515c66;
+  text-transform:none;
+}
+.head{
+    position: absolute;
+    height: 146px;
+    border-bottom: 4px solid #c2a26f;
+    background-color: #cca352;
+	display: block;
+	width: 100%;
+}
+
+</style>
+  <body>    
+
+    <!-- SCROLL TOP BUTTON -->
+    <a class="scrollToTop" href="#"></a>
+    <!-- END SCROLL TOP BUTTON -->
+
+    <!--=========== BEGIN HEADER SECTION ================-->
+
+	 
+    <header id="header">
+      <!-- BEGIN MENU -->
+	  
+	  
+      <div class="menu_area">
+	  
+	    <!-- Second navbar for categories -->
+    <nav class="navbar navbar-default" style="background-color:#E0E0E0
+">
+      <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+       
+    
+        <!-- Collect the nav links, forms, and other content for toggling -->
+       <div class="row">
+	   <div class="col-sm-8">
+	   <h3 style="color:blue;font-family: 'Merriweather', serif;
+"> International Conference On Recent advances in Civil and Environmental Engineering</h3><h4 style="color:blue;font-family: 'Merriweather', serif;
+">4-5 March 2017, Sangli, India</h4>
+      </div><!-- /.container -->
+      <div class="col-sm-2">
+	  <img src="img/logo.png" width="140" height="100"></img></div><div class="col-sm-2"><br><h2 style="color:blue">RACEE2017</h2>
+	  </div>
+	  </div>
+	  </div>
+	</nav><!-- /.navbar -->
+        <nav class="navbar navbar-default " role="navigation" > 
+		<div class="container">
+           
+			<div class="navbar-header">
+              <!-- FOR MOBILE VIEW COLLAPSED BUTTON -->
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+			  
+              <!-- LOGO -->
+              <!-- TEXT BASED LOGO -->
+              <a class="navbar-brand" href="index.html">RACEE<span>2017</span></a>              
+              <!-- IMG BASED LOGO  -->
+               <!-- <a class="navbar-brand" href="index.html"><img src="img/logo.png" alt="logo"></a>  -->            
+                     
+            </div>
+			
+            <div id="navbar" class="navbar-collapse collapse">
+              <ul id="top-menu" class="nav navbar-nav navbar-right main-nav">
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Home<span class="caret"></span></a>
+                  <ul class="dropdown-menu" role="menu">
+                    <li><a href="#aboutUs">About College and Department</a></li>
+					<li><a href="#studentsTestimonial">Departmental VMO's</a></li>
+                    <li><a href="#ourCourses">Speakers</a></li>
+                    
+					
+                  </ul>
+                </li>   
+				 <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Imp.information<span class="caret"></span></a>
+                  <ul class="dropdown-menu" role="menu">
+                    <li><a href="call_for_papers.html">Call for papers</a></li>
+                    <li><a href="theme.html">Themes of Conference</a></li>
+                    <li><a href="registrations.html">Registration and Payment</a></li>
+					
+                  </ul>
+                </li>   
+				 <li class="dropdown">
+                  <a href="persons.html">Committee</a>
+                  
+                </li> 
+                <li><a href="downloads.html">Downloads</a></li>                
+				  	
+                <li><a href="gallery.html">Gallery</a></li>                
+                
+
+                <li><a href="contact.php">Contact</a></li>
+              </ul>           
+            </div><!--/.nav-collapse -->
+          </div>     
+        </nav>  
+      </div>
+      <!-- END MENU -->    
+    </header>
+    <!--=========== END HEADER SECTION ================--> 
+
+    <!--=========== BEGIN SLIDER SECTION ================-->
+    <section id="slider" style="background-color:#212121">
+      <div class="row">
+        <div class="col-lg-12 col-md-12">
+          <div class="slider_area">
+            <!-- Start super slider -->
+            <div id="slides">
+              <ul class="slides-container">                          
+                <li>
+                  <img src="img/pic11.jpg" alt="img">
+                   <div class="slider_caption" style="top:68%;">
+                    <h2>Civil Faculty</h2>
+                    <p>The Department is known for its reputed teachers having expertise in diverse fields. The department continues to strive loftier by exploring new frontiers of civil engineering</p>
+                  </div>
+                  </li>
+                <!-- Start single slider-->
+                <li>
+                  <img src="img/pic66.jpg" alt="img">
+                   <div class="slider_caption slider_right_caption">
+                    <h2>Dedicated To Serve</h2>
+                    <p>It is one of the best places to study.The department provides platform to address problems of societal concern.</p>
+                  </div>
+                </li>
+                <!-- Start single slider-->
+                <li>
+                  <img src="img/college.png" alt="img">
+                   <div class="slider_caption">
+                    <h2>WCE , Sangli.</h2>
+                    <p style="text-align: justify;text-justify: inter-word;">Established in the year 1947, Walchand College of Engineering (WCE) is one of the reputed colleges in India. Affiliated to Shivaji University, Kolhapur, this college was granted autonomy in the year 2007 and has been one of the few selected colleges in India undergoing the MHRD funded projects under TEQIP</p>
+                  </div>
+                </li>
+              </ul>
+              <nav class="slides-navigation">
+                <a href="#" class="next"></a>
+                <a href="#" class="prev"></a>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--=========== END SLIDER SECTION ================-->
+
+    <!--=========== BEGIN ABOUT US SECTION ================-->
+    <section id="aboutUs">
+      
+	  <div class="container">
+        <div class="row">
+        <!-- Start about us area -->
+               <div class="col-lg-12 col-md-12 col-sm-12">
+			<div class="aboutus_area wow fadeInLeft" style="text-align: justify;text-justify: inter-word;">
+<p>Having held more than twenty technical events in last five years successfully, we are very proud to announce the first edition of <b>International Conference on “Recent Advances in Civil and Environmental Engineering” (RACEE - 2017)</b>. The conference is going to be held in Civil Engineering Department of Walchand College of Engineering, Sangli (MS) on 4th and 5th March 2017. The <b>RACEE - 2017</b> aims at presenting recent advances in the research areas of Civil and Environmental Engineering. Thus, the conference provides an opportunity to technologists, entrepreneurs and policy makers, engineering community and also students, all around the World. It is going to be wonderful platform for the delegates to exchange their experiences with world renowned plenary and featured speakers. </p>
+<p>We are looking forward to welcome you !! </p>           
+		   </div>
+              </div>
+<br><br>			  
+        <div class="col-lg-12 col-md-12 col-sm-12">
+          <div class="aboutus_area wow fadeInLeft" style="text-align: justify;text-justify: inter-word;">
+            <h2 class="titile">About College</h2>
+            <p>Established in the year 1947, Walchand College of Engineering (WCE) is one of the reputed colleges in India. Affiliated to Shivaji University, Kolhapur, this college was granted autonomy in the year 2007 and has been one of the few selected colleges in India undergoing the MHRD funded projects under TEQIP. The college has been accredited by NAAC with “A” grade and most of the academic programmes are accredited by NBA.</p>
+          		  <p>WCE is located on Belagavi-Pune railway route and the convenient airports are Belagavi (120 kms), Pune (230 Kms) and Mumbai (450 kms) from Sangli.</p>
+
+		  <h2 class="titile">About Department</h2>
+		  <p>The Department of Civil Engineering was the first inchoative discipline at Walchand College of Engineering, Sangli and the oldest in Southern Maharashtra region. The Department offers Bachelor’s Degree in Civil Engineering (B.Tech.) and two programmes leading to Master’s degree (M.Tech.) in Civil engineering with specialization of Environmental Engineering and Structural Engineering adequately supported with doctoral programmes in Civil Engineering. The department has been accredited for five years by NBA consistently twice since 2003. </p>
+		  <p>The Department is known for its reputed teachers having expertise in diverse fields. The department continues to strive loftier by exploring new frontiers of civil engineering, imparting the latest technical knowledge to the students and conducting high quality  research which renders technical advice on live engineering problems in the field of Environmental Engineering to various Government and Private Sector organizations throughout the state. It has built up a wide research potential in Environmental Engineering, Geotechnical Engineering and Building Technologies. The research projects of the department are funded by various agencies such as Ministry of Human Resource Development (MHRD), All India Council for Technical Education (AICTE), Maharashtra Pollution Control Board (MPCB), Department of Science and Technology (DST) etc.</p>
+		  </div>
+        </div>
+       
+      </div>
+      </div>
+    </section>
+	
+	
+	<section id="studentsTestimonial">
+      <br><br><br><br>
+	  <div class="container" >
+            <div class="row">
+			 <h2 class="titile">VMO's</h2>
+
+                <div class="col-md-12 text-center">
+                    <div class="box">
+                        <div class="box-content">
+                            <h1 class="tag-title" style="font-family: 'Francois One', sans-serif;">VISION</h1>
+                            <hr />
+							<p style="font-size:20px">To be a Civil Engineering programme of the first choice by the aspiring students and prospective employers by implementing world class education practices.</p>
+                            <br />
+                        </div>
+                    </div>
+                </div>
+				</div>
+				<br><br>
+				<div class="row">
+                <div class="col-md-12 text-center">
+                    <div class="box">
+                        <div class="box-content">
+                            <h1 class="tag-title" style="font-family: 'Francois One', sans-serif;">MISSION</h1>
+                            <hr />
+							<p style="font-size:20px;text-align:left">To meet the Vision, all stakeholders of this programme are committed towards Outcome Based Education Philosophy by </p>
+                            <br />
+							<p style="font-size:20px;text-align:left">1. Adopting vibrant academic curricula and implementing innovative teaching learning processes. </p>
+							<p style="font-size:20px;text-align:left">2. Providing opportunities to the students for the development of professional skills. </p>
+						    <p style="font-size:20px;text-align:left">3. Nurturing critical thinking and creativity in students. </p>
+							<p style="font-size:20px;text-align:left">4. Inculcating in students the life-long learning attitude and sensitivity towards society & environment. </p>
+
+							</div>
+                    </div>
+                </div>
+				</div>
+				<div class="row">
+				<br><br>
+                <div class="col-md-12 text-center">
+                    <div class="box">
+                        <div class="box-content">
+                            <h1 class="tag-title" style="font-family: 'Francois One', sans-serif;">OBJECTIVES</h1>
+                            <hr />
+                            <br />
+                        <p style="font-size:20px;text-align:left">1. To achieve high level of technical expertise to understand, identify, formulate, design and implement a real life Civil Engineering problem.  </p>
+							<p style="font-size:20px;text-align:left">2. To inculcate the leadership and ethical qualities in implementing the projects. </p>
+							<p style="font-size:20px;text-align:left">3. To produce technically competent and ethically sound engineering graduates.  </p>
+							<p style="font-size:20px;text-align:left">4. To satisfy the requirement of society through active participation in infrastructural development.  </p>
+							<p style="font-size:20px;text-align:left">5. To prepare the students towards competitive examinations, research and higher education.  </p>
+							<p style="font-size:20px;text-align:left">6. To induce qualities of life-long learning, working in teams with effective communication skills and interaction with society. </p>
+
+						</div>
+                    </div>
+                </div>
+            </div>           
+        </div>
+      </div>
+    </section>
+    
+    <section id="ourCourses">
+	<br><br>
+      <div class="container">
+       <!-- Our courses titile -->
+        <div class="row">
+          <div class="col-lg-12 col-md-12"> 
+            <div class="title_area">
+              <h2 class="title_two">Plenary Speakers</h2>
+              <span></span> 
+            </div>
+          </div>
+        </div>
+        <!-- End Our courses titile -->
+        <!-- Start Our courses content -->
+        <div class="row">
+          <div class="col-lg-12 col-md-12 col-sm-12">
+            <div class="ourCourse_content">
+              <ul class="course_nav">
+                <li>
+                
+                    <div class="single_stsTestimonial wow fadeInUp">
+                    <div class="stsTestimonial_msgbox">
+                      <a href="satjin.html">View More...</a>
+                    </div>
+                    <center><img class="stsTesti_img" src="img/speaker1.jpg" alt="img"></center>
+                    <div class="stsTestimonial_content">
+                      <h3>SATIJN, H.M.C. (Bert)</h3>                      
+                      <span>Independant Consultant</span>
+                      <p>on water,wash,soil and IWRM</p>
+                    </div>
+                  </div>
+                  
+                </li>
+                <li>
+                 <div class="single_stsTestimonial wow fadeInUp">
+                    <div class="stsTestimonial_msgbox">
+                      <a href="Edelkoort.html">View More...</a>
+                    </div>
+                    <center><img class="stsTesti_img" src="img/Edelkoort.jpg" alt="img"></center>
+                    <div class="stsTestimonial_content">
+                      <h3>Ir. Th. (Thijs) Edelkoort</h3>                      
+                      <span>Advisor at Osborn</span>
+                      <p>Infrastructure Managment</p>
+                    </div>
+                  </div>
+                </li> 
+                <li>
+                    <div class="single_stsTestimonial wow fadeInUp">
+                    <div class="stsTestimonial_msgbox">
+                      <a href="kulwant.html">View More...</a>
+                    </div>
+                    <center><img class="stsTesti_img" src="img/kulwant.jpg" alt="img"></center>
+                    <div class="stsTestimonial_content">
+                      <h3>KULWANT SINGH</h3>                      
+                      <span>CEO</span>
+                      <p>3R WASTE Foundation (India)</p>
+                    </div>
+                  </div>
+                </li>  
+				<li>
+                    <div class="single_stsTestimonial wow fadeInUp">
+                    <div class="stsTestimonial_msgbox">
+                      <a href="shishir.html">View More...</a>
+                    </div>
+                    <center><img class="stsTesti_img" src="img/shishir.jpg" alt="img"></center>
+                    <div class="stsTestimonial_content">
+                      <h3>Shishir Sable</h3>                      
+                      <span>Manager Energy and Projects</span>
+                      <p>Den Haag en ongeving,Netherland</p>
+                    </div>
+                  </div>
+                </li>  
+                <li>
+                    <div class="single_stsTestimonial wow fadeInUp">
+                    <div class="stsTestimonial_msgbox">
+                      <a href="valentin.html">View More...</a>
+                    </div>
+                    <center><img class="stsTesti_img" src="img/valentin.jpg" alt="img"></center>
+                    <div class="stsTestimonial_content">
+                      <h3>Valentin Post</h3>                      
+                      <span>Managing Director</span>
+                      <p>WASTE</p>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                   <div class="single_stsTestimonial wow fadeInUp">
+                    <div class="stsTestimonial_msgbox">
+                      <a href="umesh.html">View More...</a>
+                    </div>
+                    <center><img class="stsTesti_img" src="img/umesh.jpg" alt="img"></center>
+                    <div class="stsTestimonial_content">
+                      <h3>Umesh Dhargalkar</h3>                      
+                      <span>Director</span>
+                      <p>Dhargalkar Technologies Pvt Ltd</p>
+                    </div>
+                  </div>
+                </li> 
+				<li>
+                   <div class="single_stsTestimonial wow fadeInUp">
+                    <div class="stsTestimonial_msgbox">
+                      <a href="mohankumar.html">View More...</a>
+                    </div>
+                    <center><img class="stsTesti_img" src="img/mohan.jpg" alt="img"></center>
+                    <div class="stsTestimonial_content">
+                      <h3>Prof.M.S.Mohan Kumar</h3>                      
+                      <span>Professor</span>
+                      <p>Department of Civil Engineering,
+Indian Institute of Science, Bangalore</p>
+                    </div>
+                  </div>
+                </li> 
+				<li>
+                   <div class="single_stsTestimonial wow fadeInUp">
+                    <div class="stsTestimonial_msgbox">
+                      <a href="vasant.html">View More...</a>
+                    </div>
+                    <center><img class="stsTesti_img" src="img/vasant.jpg" alt="img"></center>
+                    <div class="stsTestimonial_content">
+                      <h3>Dr. Vasant Anant Mhaisalkar</h3>                      
+                      <span>Professor</span>
+                      <p>Visvesvaraya National Institute of Technology</p>
+                    </div>
+                  </div>
+                </li> 
+                      
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- End Our courses content -->
+      </div>
+	  <br><br>
+    </section>
+	
+	
+	<section id="featuredSpeakers">
+	<br><br>
+    
+	<div class="container" style="padding:50px;">
+	<br><br>
+	        <div class="row">
+          <div class="col-lg-12 col-md-12"> 
+            <div class="title_area">
+              <h2 class="title_two">Featured Speakers</h2>
+			  <center><h4>( As per sessions )</h4></center>
+              <span></span> 
+            </div>
+          </div>
+        </div>
+   
+    <div class="msg msg-magick"> Prof.Digvijay Pawar (IIT Hyderabad)</div>
+	<div class="msg msg-magick"> Prof.B.Umashankar (IIT Hyderabad)</div>
+	<div class="msg msg-magick"> Dr.B.S.Patil (IIT Bombay)</div>
+	<div class="msg msg-magick"> Prof.A.R.Tembhurkar (VNIT Nagpur)</div>
+	<div class="msg msg-magick"> Prof.K.Gopal Rao (IIT Bombay)</div>
+	<div class="msg msg-magick"> Prof.Vinod Hosur (GIT Belgavi)</div>
+	<div class="msg msg-magick"> Prof.L.G.Patil (SGGS Nanded)</div>
+	<div class="msg msg-magick"> Prof.Raghunath (BMS College of Engineering,Bengaluru)</div>
+	<div class="msg msg-magick"> Prof.K.R.Suresh (BMS College of Engineering,Bengaluru)</div>
+	<div class="msg msg-magick"> Prof.C.B.Shivayogimath (BVVS College of Engineering,Bagalkot) </div>
+	<div class="msg msg-magick"> Prof.Pradip Kalbar (IIT Bombay)</div>
+    <div class="msg msg-magick"> Vrinda Thakur (Director - FINSOURCING,Holland)</div>
+	<div class="msg msg-magick"> Prof. Jyoti Prasad (G.B.Pant College of Technology)</div>
+
+
+	</div>
+	
+	</section>
+    <!--=========== END OUR COURSES SECTION ================-->  
+
+    <!--=========== BEGIN OUR TUTORS SECTION ================-->
+    
+    <!--=========== END OUR TUTORS SECTION ================-->
+
+    <!--=========== BEGIN STUDENTS TESTIMONIAL SECTION ================-->
+
+    <!--=========== END STUDENTS TESTIMONIAL SECTION ================-->    
+    
+    <!--=========== BEGIN FOOTER SECTION ================-->
+    <footer id="footer">
+      <!-- Start footer top area -->
+      <div class="footer_top">
+        <div class="container">
+          <div class="row">
+            
+            <div class="col-ld-4  col-md-4 col-sm-4">
+              <div class="single_footer_widget">
+                <h3>Links</h3>
+                <ul class="footer_widget_nav">
+                  <li><a href="call_for_papers.html">Call For Papers</a></li>
+                  <li><a href="registrations.html">Registration</a></li>
+                  <li><a href="registrations.html">Payment Details</a></li>
+                  
+                </ul>
+              </div>
+            </div>
+            <div class="col-ld-4  col-md-4 col-sm-4">
+              <div class="single_footer_widget">
+                <h3>Others</h3>
+                <ul class="footer_widget_nav">
+                  <li><a href="theme.html">Themes of Conference</a></li>
+                  <li><a href="gallery.html">Gallery</a></li>
+                  
+                </ul>
+              </div>
+            </div>
+            <div class="col-ld-4  col-md-4 col-sm-4">
+              <div class="single_footer_widget">
+                <h3>Connect Us On</h3>
+                <ul class="footer_social">
+                  <li><a data-toggle="tooltip" data-placement="top" title="Facebook" class="soc_tooltip" href="https://www.facebook.com/Civil-DepartmentWCESangli-250199982068871/"><i class="fa fa-facebook"></i></a></li>
+                  <li><a data-toggle="tooltip" data-placement="top" title="Google+" class="soc_tooltip"  href="#"><i class="fa fa-google-plus"></i></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End footer top area -->
+
+      <!-- Start footer bottom area -->
+      <div class="footer_bottom">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-6">
+              <div class="footer_bootomLeft">
+			                <p> Developed By - Shubham Anil Hupare</p>
+
+              </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6">
+              <div class="footer_bootomRight">
+                <p><a href="http://walchandsangli.ac.in" rel="nofollow">Walchand College of Engg. Sangli</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End footer bottom area -->
+    </footer>
+    <!--=========== END FOOTER SECTION ================--> 
+
+  
+
+    <!-- Javascript Files
+    ================================================== -->
+
+    <!-- initialize jQuery Library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- Preloader js file -->
+    <script src="js/queryloader2.min.js" type="text/javascript"></script>
+    <!-- For smooth animatin  -->
+    <script src="js/wow.min.js"></script>  
+    <!-- Bootstrap js -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- slick slider -->
+    <script src="js/slick.min.js"></script>
+    <!-- superslides slider -->
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/jquery.animate-enhanced.min.js"></script>
+    <script src="js/jquery.superslides.min.js" type="text/javascript" charset="utf-8"></script>   
+    <!-- for circle counter -->
+    <script src='https://cdn.rawgit.com/pguso/jquery-plugin-circliful/master/js/jquery.circliful.min.js'></script>
+    <!-- Gallery slider -->
+    <script type="text/javascript" language="javascript" src="js/jquery.tosrus.min.all.js"></script>   
+   
+    <!-- Custom js-->
+    <script src="js/custom.js"></script>
+    <!--=============================================== 
+    Template Design By WpFreeware Team.
+    Author URI : http://www.wpfreeware.com/
+    ====================================================-->
+
+
+  </body>
+</html>
